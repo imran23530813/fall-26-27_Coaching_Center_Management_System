@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Login</title>
+</head>
+
+<body>
+    <form method="post">
+        <fieldset>
+            <h1>CoachEase Login</h1>
+            <table>
+                <!-- Username -->
+                <tr>
+                    <td><label for="username">Username:</label></td>
+                    <td><input type="text" id="username" name="username"></td>
+                </tr>
+
+                <!-- Passcode -->
+                <tr>
+                    <td><label for="passcode">Passcode:</label></td>
+                    <td><input type="password" id="passcode" name="passcode"></td>
+                </tr>
+
+                <!-- Role Selection -->
+                <tr>
+                    <td><label for="role">Select Role:</label></td>
+                    <td>
+                        <select id="role" name="role">
+
+                            <option value="teacher">Teacher</option>
+                            <option value="student">Student</option>
+                            <option value="accounts">Accounts Manager</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Login Button -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Login">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>
