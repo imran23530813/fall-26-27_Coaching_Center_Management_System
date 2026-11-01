@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Result Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="result-header">
+        <h1>Coaching Management System</h1>
+        <p>Teacher Panel - Result Management</p>
+    </header>
+
+    <nav class="teacher-nav">
+        <a href="teacher-dashboard.html">Dashboard</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="exams.html">Exams</a>
+        <a href="results.html">Results</a>
+        <a href="assignments.html">Assignments</a>
+    </nav>
+
+    <main class="result-container">
+        <h2>Result Management</h2>
+        <p>Select a course and exam to view sample results.</p>
+
+        <!--form strt -->
+        <form class="result-form" action="#" method="get">
+            <label for="resultCourse">Course</label>
+            <select id="resultCourse" name="course" required>
+                <option value="">Select Course</option>
+                <option value="physics">Physics</option>
+                <option value="math">Math</option>
+                <option value="english">English</option>
+            </select>
+
+            <label for="resultExam">Exam</label>
+            <select id="resultExam" name="exam" required>
+                <option value="">Select Exam</option>
+                <option value="midterm">Midterm</option>
+                <option value="final">Final</option>
+            </select>
+
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" name="studentId" placeholder="Example: ST-101" required>
+
+            <label for="obtainedMarks">Obtained Marks</label>
+            <input type="number" id="obtainedMarks" name="marks" min="0" max="100" placeholder="0 to 100" required>
+
+            <button type="button">Save Result (Demo)</button>
+        </form>
+        <!--result form end-->
+
+        <!--result table start-->
+        <h3>Sample Result List</h3>
+        <div class="result-table-wrap">
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>SL</th>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Exam</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>ST-101</td>
+                        <td>Roja</td>
+                        <td>Web Development</td>
+                        <td>Midterm</td>
+                        <td>85</td>
+                        <td>A</td>
+                        <td>Draft</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ST-102</td>
+                        <td>Era</td>
+                        <td>Web Development</td>
+                        <td>Midterm</td>
+                        <td>82</td>
+                        <td>B+</td>
+                        <td>Draft</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- result table end-->
+        <button class="result-publish" type="button">
+            Publish Results (Demo)
+        </button>
+
+    </main>
+    <footer>
+        <p>&copy; 2026 Coaching Management System</p>
+    </footer>
+</body>
+
+</html>

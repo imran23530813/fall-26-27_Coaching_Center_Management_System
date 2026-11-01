@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Coaching Management System</h1>
+        <p>Teacher Panel - Attendance Management</p>
+    </header>
+
+    <nav>
+        <a href="teacher-dashboard.html">Dashboard</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="exams.html">Exams</a>
+        <a href="results.html">Results</a>
+        <a href="assignments.html">Assignments</a>
+    </nav>
+    <!--from strt-->
+    <main class="attendance-page">
+        <h2>Daily Student Attendance</h2>
+        <p>Select course and date, then mark each student.</p>
+        <form id="attendanceForm">
+            <div class="attendance-fields">
+                <div>
+                    <label for="attendanceCourse">Course</label>
+                    <select id="attendanceCourse" name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="physics">Physics</option>
+                        <option value="math">Math</option>
+                        <option value="english">English</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="attendanceDate">Date</label>
+                    <input type="date" id="attendanceDate" name="date" required>
+                </div>
+            </div>
+
+            <!-- table strt-->
+            <div class="attendance-table-wrap">
+                <table class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>SL</th>
+                            <th>Student Name</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Roja</td>
+                            <td><input type="radio" name="student1" value="present" required></td>
+                            <td><input type="radio" name="student1" value="absent"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Era</td>
+                            <td><input type="radio" name="student2" value="present" required></td>
+                            <td><input type="radio" name="student2" value="absent"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Imran</td>
+                            <td><input type="radio" name="student3" value="present" required></td>
+                            <td><input type="radio" name="student3" value="absent"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table end -->
+            <button type="button">Save Attendance</button>
+        </form>
+    </main>
+    <!--from end-->
+
+    <footer>
+        <p>&copy; 2026 Coaching Management System</p>
+    </footer>
+</body>
+
+</html>

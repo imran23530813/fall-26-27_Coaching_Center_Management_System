@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Coaching Management System</h1>
+    </header>
+
+    <nav>
+        <a href="teacher-dashboard.html">Dashboard</a>
+        <a href="attendance.html">Attendance</a>
+        <a href="exams.html">Exams</a>
+        <a href="results.html">Results</a>
+        <a href="assignments.html">Assignments</a>
+    </nav>
+    <main>
+        <section class="teacher-login-section">
+            <h2>Teacher Login</h2>
+            <p>Enter your teacher account details</p>
+            <form>
+                <label for="teacherEmail">Email</label>
+                <input type="email" id="teacherEmail" name="email" placeholder="Teacher email" required>
+
+                <label for="teacherPassword">Password</label>
+                <input type="password" id="teacherPassword" name="password" placeholder="Password" minlength="8"
+                    required>
+
+                <button type="button">Login</button>
+            </form>
+            <p class="teacher-login-note">
+                Teacher accounts will be managed by Admin later.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Coaching Management System</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Coaching Management System</h1>
+        <p>Teacher Panel - Exam Management</p>
+        <nav>
+            <a href="teacher-dashboard.html">Dashboard</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="exams.html">Exams</a>
+            <a href="results.html">Results</a>
+            <a href="assignments.html">Assignments</a>
+        </nav>
+    </header>
+    <!-- form strt -->
+    <main class="exam-page">
+        <h2>Create Exam Schedule</h2>
+        <p>Enter exam information below </p>
+        <form id="examForm">
+            <div class="exam-fields">
+                <div>
+                    <label for="examName">Exam Name</label>
+                    <input type="text" id="examName" name="examName" placeholder="Monthly Test" required>
+                </div>
+                <div>
+                    <label for="examCourse">Course</label>
+                    <select id="examCourse" name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="physics">Physics</option>
+                        <option value="math">Math</option>
+                        <option value="english">English</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="examSubject">Subject</label>
+                    <input type="text" id="examSubject" name="subject" placeholder="Subject" required>
+                </div>
+                <div>
+                    <label for="examDate">Exam Date</label>
+                    <input type="date" id="examDate" name="date" required>
+                </div>
+                <div>
+                    <label for="examTime">Exam Time</label>
+                    <input type="time" id="examTime" name="time" required>
+                </div>
+                <div>
+                    <label for="totalMarks">Total Marks</label>
+                    <input type="number" id="totalMarks" name="marks" min="1" max="1000" required>
+                </div>
+            </div>
+            <button type="button">Save Exam</button>
+        </form>
+    </main>
+    <!-- form end -->
+    <!-- schedul table strt -->
+    <section class="exam-page">
+        <h2>Sample Exam Schedule</h2>
+        <div class="exam-table-wrap">
+            <table class="exam-table">
+                <thead>
+                    <tr>
+                        <th>Exam</th>
+                        <th>Course</th>
+                        <th>Subject</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Marks</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Test</td>
+                        <td>Physics</td>
+                        <td>HSC</td>
+                        <td>2026-11-15</td>
+                        <td>10:00 AM</td>
+                        <td>50</td>
+                        <td>Edit / Delete (Later)</td>
+                    </tr>
+                    <tr>
+                        <td>Quiz 1</td>
+                        <td>MATH</td>
+                        <td>HSC</td>
+                        <td>2026-11-18</td>
+                        <td>11:00 AM</td>
+                        <td>20</td>
+                        <td>Edit / Delete (Later)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; 2026 Coaching Management System</p>
+    </footer>
+</body>
+
+</html>

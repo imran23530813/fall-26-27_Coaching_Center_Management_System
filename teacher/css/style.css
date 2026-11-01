@@ -1,0 +1,48 @@
+.teacher-login-section {
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+.teacher-login-section h2 {
+    text-align: center;
+    color: #17476b;
+}
+
+.teacher-login-section label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.teacher-login-section input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+.teacher-login-section button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: #17618a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.teacher-login-section button:hover {
+    background-color: #104563;
+}
+
+.teacher-login-note {
+    font-size: 13px;
+    color: #555555;
+}
