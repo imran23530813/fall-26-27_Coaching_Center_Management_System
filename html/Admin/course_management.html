@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CoachEase - Course Management</title>
+</head>
+
+<body>
+
+    <h1>🎓 CoachEase</h1>
+    <h2>📚 Manage Courses</h2>
+
+    <nav>
+        <a href="course_management.html">Course Management</a> |
+        <a href="batch_management.html">Batch Management</a> |
+        <a href="staff_teacher_management.html">Staff/Teacher Management</a>
+    </nav>
+
+    <fieldset>
+        <legend>✨Available Classes</legend>
+
+        <table border="1">
+            <tr>
+                <th>Class</th>
+                <th>Level</th>
+                <th>Subject Information</th>
+            </tr>
+
+            <tr>
+                <td>Class 6</td>
+                <td>Junior Secondary</td>
+                <td>General Subjects</td>
+            </tr>
+
+            <tr>
+                <td>Class 7</td>
+                <td>Junior Secondary</td>
+                <td>General Subjects</td>
+            </tr>
+
+            <tr>
+                <td>Class 8</td>
+                <td>Junior Secondary</td>
+                <td>General Subjects</td>
+            </tr>
+
+            <tr>
+                <td>Class 9</td>
+                <td>Secondary (SSC)</td>
+                <td>Science, Humanities, Business Studies</td>
+            </tr>
+
+            <tr>
+                <td>Class 10</td>
+                <td>Secondary (SSC)</td>
+                <td>Science, Humanities, Business Studies</td>
+            </tr>
+
+            <tr>
+                <td>Class 11</td>
+                <td>Higher Secondary (HSC)</td>
+                <td>Science, Business Studies, Humanities</td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>➕Add Course</legend>
+
+        <form method="post">
+
+            <table>
+                <tr>
+                    <td>
+                        <label for="class">Select Class:</label>
+                    </td>
+                    <td>
+                        <select id="class" name="class" required>
+                            <option value="">-- Select Class --</option>
+                            <option value="6">Class 6</option>
+                            <option value="7">Class 7</option>
+                            <option value="8">Class 8</option>
+                            <option value="9">Class 9</option>
+                            <option value="10">Class 10</option>
+                            <option value="11">Class 11</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="cname">Course Name:</label>
+                    </td>
+
+                    <td>
+                        <select id="cname" name="cname" required>
+                            <option value="">-- Select Course --</option>
+                            <option value="Bangla">Bangla</option>
+                            <option value="English">English</option>
+                            <option value="Mathematics">Mathematics</option>
+                            <option value="Science">Science</option>
+                            <option value="Bangladesh and Global Studies">
+                                Bangladesh and Global Studies
+                            </option>
+                            <option value="ICT">Information and Communication Technology (ICT)</option>
+                            <option value="Religious Education">Religious and Moral Education</option>
+                            <option value="Physical Education">Physical Education and Health</option>
+                            <option value="Work and Life Education">Work and Life Oriented Education</option>
+                            <option value="Agriculture Studies">Agriculture Studies</option>
+                            <option value="Home Science">Home Science</option>
+                            <option value="Arts and Crafts">Arts and Crafts</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Biology">Biology</option>
+                            <option value="Higher Mathematics">Higher Mathematics</option>
+                            <option value="History">History of Bangladesh and World Civilization</option>
+                            <option value="Geography">Geography and Environment</option>
+                            <option value="Civics">Civics and Citizenship</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Finance and Banking">Finance and Banking</option>
+                            <option value="Business Entrepreneurship">Business Entrepreneurship</option>
+                            <option value="Business Organization and Management">
+                                Business Organization and Management
+                            </option>
+                            <option value="Banking and Insurance">Banking and Insurance</option>
+                            <option value="Economics">Economics</option>
+                            <option value="Logic">Logic</option>
+                            <option value="Sociology">Sociology</option>
+                            <option value="Social Work">Social Work</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cdesc">Description:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="cdesc" name="cdesc" placeholder="Describe somthing">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="cfee">Course Fee:</label>
+                    </td>
+                    <td>
+                        <input type="number" id="cfee" name="cfee" placeholder="add ammount" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Add Course">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>📋Course List</legend>
+
+        <table border="1">
+            <tr>
+                <th>Course ID</th>
+                <th>Class</th>
+                <th>Course Name</th>
+                <th>Description</th>
+                <th>Course Fee</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>CRS-101</td>
+                <td>Class 9</td>
+                <td>Physics</td>
+                <td>Physics Course</td>
+                <td>5000</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>CRS-102</td>
+                <td>Class 8</td>
+                <td>Mathematics</td>
+                <td>Mathematics Course</td>
+                <td>4500</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>CRS-103</td>
+                <td>Class 11</td>
+                <td>English</td>
+                <td>English Course</td>
+                <td>4000</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+</body>
