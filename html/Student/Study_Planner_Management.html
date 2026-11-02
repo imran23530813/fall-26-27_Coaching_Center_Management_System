@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CoachEase - Student Dashboard</title>
+</head>
+
+<body>
+
+    <h1>CoachEase</h1>
+    <h2>Student Learning Dashboard</h2>
+    <p>Student Name: Toshi Begum</p>
+    <p>Roll: HSC-2026-08</p>
+    <p>Class: 12 - Physics </p>
+
+
+    <fieldset id="planner">
+        <h2>Study Planner Management</h2>
+        <h3>Add Study Task</h3>
+        <form>
+            <label for="task-title">Task Title:</label><br>
+            <input type="text" id="task-title" name="task-title" required><br><br>
+
+            <label for="task-subject">Subject:</label><br>
+            <input type="text" id="task-subject" name="task-subject" required><br><br>
+
+            <label for="task-date">Due Date:</label><br>
+            <input type="date" id="task-date" name="task-date" required><br><br>
+
+            <label for="task-priority">Priority:</label><br>
+            <select id="task-priority" name="task-priority">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select><br><br>
+
+            <label for="task-status">Status:</label><br>
+            <select id="task-status" name="task-status">
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+            </select><br><br>
+
+            <input type="submit" value="Add Task">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h3>Study Tasks</h3>
+        <table border="1">
+            <tr>
+                <td>Task Title</td>
+                <td>Subject</td>
+                <td>Due Date</td>
+                <td>Priority</td>
+                <td>Status</td>
+            </tr>
+            <tr>
+                <td>Revise Thermodynamics Equations</td>
+                <td>Physics</td>
+                <td>2026-10-26</td>
+                <td>High</td>
+                <td>In Progress</td>
+            </tr>
+            <tr>
+                <td>Solve Past Paper 2024 MCQs</td>
+                <td>Higher Math</td>
+                <td>2026-10-28</td>
+                <td>Medium</td>
+                <td>Pending</td>
+            </tr>
+            <tr>
+                <td>Complete Organic Chemistry Reactions Notes</td>
+                <td>Chemistry</td>
+                <td>2026-10-20</td>
+                <td>Low</td>
+                <td>Completed</td>
+            </tr>
+        </table>
+    </fieldset>
+
+</body>
+
+</html>

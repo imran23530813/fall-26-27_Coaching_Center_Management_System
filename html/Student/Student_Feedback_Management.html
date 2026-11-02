@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CoachEase - Student Dashboard</title>
+</head>
+
+<body>
+
+    <h1>CoachEase</h1>
+    <h2>Student Learning Dashboard</h2>
+    <p>Student Name: Toshi Begum</p>
+    <p>Roll: HSC-2026-08</p>
+    <p>Class: 12 - Physics </p>
+
+
+    <fieldset id="feedback">
+        <h2>Student Feedback Management</h2>
+        <h3>Submit Course Feedback</h3>
+        <form>
+            <label for="teacher-subject">Teacher / Subject:</label><br>
+            <select id="teacher-subject" name="teacher-subject">
+                <option>Dr. Rafiqul Islam (Physics)</option>
+                <option>Prof. Kamrul Hasan (Higher Math)</option>
+                <option>Ms. Farhana Rahman (Chemistry)</option>
+            </select><br><br>
+
+            <label for="rating">Rating (1 to 5):</label><br>
+            <select id="rating" name="rating">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select><br><br>
+
+            <label for="teaching-quality">Teaching Quality:</label><br>
+            <input type="text" id="teaching-quality" name="teaching-quality" required><br><br>
+
+            <label for="class-experience">Class Experience:</label><br>
+            <input type="text" id="class-experience" name="class-experience" required><br><br>
+
+            <label for="suggestions">Suggestions for Improvement:</label><br>
+            <input type="text" id="suggestions" name="suggestions"><br><br>
+
+            <input type="submit" value="Submit Feedback">
+            <input type="reset" value="Reset">
+        </form>
+
+        <h3>Feedback Records</h3>
+        <table border="1">
+            <tr>
+                <td>Teacher / Subject</td>
+                <td>Rating</td>
+                <td>Teaching Quality</td>
+                <td>Class Experience</td>
+                <td>Suggestions</td>
+                <td>Status</td>
+            </tr>
+            <tr>
+                <td>Dr. Rafiqul Islam (Physics)</td>
+                <td>5</td>
+                <td>Outstanding explanation of complex topics</td>
+                <td>Very interactive sessions with live problem solving</td>
+                <td>Add extra doubt clearing classes before exam</td>
+                <td>Published</td>
+            </tr>
+        </table>
+    </fieldset>
+
+
+</body>
+
+</html>

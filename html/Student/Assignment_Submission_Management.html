@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+</head>
+
+<body>
+
+    <h1>CoachEase</h1>
+    <h2>Student Learning Dashboard</h2>
+    <p>Student Name: Toshi Begum</p>
+    <p>Roll: HSC-2026-08</p>
+    <p>Class: 12 - Physics </p>
+
+    <fieldset id="assignments">
+        <h2>Assignment Submission Management</h2>
+        <h3>Submit Assignment</h3>
+
+        <label for="assignment-title">Assignment Title:</label><br>
+        <input type="text" id="assignment-title" name="assignment-title" required><br><br>
+
+        <label for="assignment-subject">Course / Subject:</label><br>
+        <select id="assignment-subject" name="assignment-subject">
+            <option>Please Choose an Option</option>
+            <option>Physics Paper 2</option>
+            <option>Higher Math</option>
+            <option>Chemistry</option>
+        </select><br><br>
+
+        <label for="submission-date">Submission Date:</label><br>
+        <input type="date" id="submission-date" name="submission-date" required><br><br>
+
+        <label for="file-name">File Name:</label><br>
+        <input type="text" id="file-name" name="file-name" required><br><br>
+
+        <label for="assignment-status">Status:</label><br>
+        <select id="assignment-status" name="assignment-status">
+            <option>Please Choose an Option</option>
+            <option>Submitted</option>
+            <option>Under Review</option>
+            <option>Approved</option>
+            <option>Resubmit Needed</option>
+        </select><br><br>
+
+        <label for="assignment-notes">Notes:</label><br>
+        <input type="text" id="assignment-notes" name="assignment-notes"><br><br>
+
+        <input type="submit" value="Submit Assignment">
+        <input type="reset" value="Reset">
+
+
+        <h3>Assignment Records</h3>
+        <table border="1">
+            <tr>
+                <td>Assignment Title</td>
+                <td>Course / Subject</td>
+                <td>Submitted On</td>
+                <td>File Name</td>
+                <td>Status</td>
+            </tr>
+            <tr>
+                <td>Electromagnetism Problem Set 02</td>
+                <td>Physics Paper 2</td>
+                <td>2026-10-22</td>
+                <td>Physics_Set2_toshi.pdf</td>
+                <td>Approved</td>
+            </tr>
+            <tr>
+                <td>Calculus Integration Lab Work</td>
+                <td>Higher Math</td>
+                <td>2026-10-24</td>
+                <td>Math_Integration_toshi.pdf</td>
+                <td>Submitted</td>
+            </tr>
+        </table>
+    </fieldset>
+
+</body>
+
+</html>
