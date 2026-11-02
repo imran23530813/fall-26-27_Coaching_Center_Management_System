@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <h2>Salary Management</h2>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="staff_id">Staff ID:</label></td>
+                    <td><input type="text" id="staff_id" name="staff_id" placeholder="Enter staff ID" required></td>
+                </tr>
+                <tr>
+                    <td><label for="staff_name">Staff Name:</label></td>
+                    <td><input type="text" id="staff_name" name="staff_name" placeholder="Enter staff name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="staff_role">Role:</label></td>
+                    <td><select id="staff_role" name="staff_role" required>
+                            <option value="" selected disabled>Select Role</option>
+                            <option>Teacher</option>
+                            <option>Admin Staff</option>
+                            <option>Accountant</option>
+                            <option>Other Staff</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="salary_month">Salary Month:</label></td>
+                    <td><select id="salary_month" name="salary_month" required>
+                            <option value="" selected disabled>Select Month</option>
+                            <option>January</option>
+                            <option>February</option>
+                            <option>March</option>
+                            <option>April</option>
+                            <option>May</option>
+                            <option>June</option>
+                            <option>July</option>
+                            <option>August</option>
+                            <option>September</option>
+                            <option>October</option>
+                            <option>November</option>
+                            <option>December</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="salary_amount">Salary Amount:</label></td>
+                    <td><input type="number" id="salary_amount" name="salary_amount" min="0"
+                            placeholder="Enter salary amount" required></td>
+                </tr>
+                <tr>
+                    <td><label for="salary_status">Payment Status:</label></td>
+                    <td><select id="salary_status" name="salary_status" required>
+                            <option value="" selected disabled>Select Status</option>
+                            <option value="Paid">Paid</option>
+                            <option value="Pending">Pending</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Save Salary"> <input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+        <h3>Salary List</h3>
+        <table border="1">
+            <tr>
+                <th>Salary ID</th>
+                <th>Staff ID</th>
+                <th>Staff Name</th>
+                <th>Role</th>
+                <th>Month</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>SAL-101</td>
+                <td>TEA-101</td>
+                <td>Mr. Rahman</td>
+                <td>Teacher</td>
+                <td>October</td>
+                <td>18000</td>
+                <td>Paid</td>
+                <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+            </tr>
+            <tr>
+                <td>SAL-102</td>
+                <td>TEA-102</td>
+                <td>Ms. Sultana</td>
+                <td>Teacher</td>
+                <td>October</td>
+                <td>20000</td>
+                <td>Pending</td>
+                <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+            </tr>
+        </table>
+    </fieldset>
+
+</body>
+
+</html>
