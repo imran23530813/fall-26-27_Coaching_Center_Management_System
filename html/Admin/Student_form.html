@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Admission</title>
+</head>
+
+<body>
+
+    <h1>CoachEase</h1>
+    <h2>Student Enrolment</h2>
+
+
+    <nav>
+        <a href="Dashboard.html">Dashboard</a>
+        <a href="student_admission.html">Student Admission</a> |
+        <a href="teacher_management.html">Teacher Management</a> |
+        <a href="batch_management.html">Batch Management</a> |
+        <a href="course_management.html">Course Management</a>
+    </nav>
+
+    <fieldset>
+        <legend>Add New Student</legend>
+
+        <form method="post">
+
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="first_name" required></td>
+                </tr>
+
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="last_name" required></td>
+                </tr>
+
+                <tr>
+                    <td>Email Address:</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <td>Select Class:</td>
+                    <td>
+                        <select name="class" required>
+                            <option value="">Select Class</option>
+                            <option value="Class 6">Class 6</option>
+                            <option value="Class 7">Class 7</option>
+                            <option value="Class 8">Class 8</option>
+                            <option value="Class 9">Class 9</option>
+                            <option value="Class 10">Class 10</option>
+                            <option value="Class 11">Class 11</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Admission Date:</td>
+                    <td><input type="date" name="admission_date" required></td>
+                </tr>
+
+                <tr>
+                    <td>Contact Number:</td>
+                    <td><input type="tel" name="contact" required></td>
+                </tr>
+
+                <tr>
+                    <td>Home Address:</td>
+                    <td><input type="text" name="address" required></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <a href="student_admission.html"> <input type="submit" value="Add Student"></a>
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </fieldset>
+
+</body>
