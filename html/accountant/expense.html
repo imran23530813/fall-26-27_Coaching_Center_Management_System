@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense</title>
+</head>
+
+<body>
+    <hr>
+
+    <fieldset>
+        <h2>Expense Tracking</h2>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="expense_name">Expense Name:</label></td>
+                    <td><input type="text" id="expense_name" name="expense_name" placeholder="Enter expense name"
+                            required></td>
+                </tr>
+                <tr>
+                    <td><label for="expense_category">Category:</label></td>
+                    <td><select id="expense_category" name="expense_category" required>
+                            <option value="" selected disabled>Select Category</option>
+                            <option>Utilities</option>
+                            <option>Rent</option>
+                            <option>Stationery</option>
+                            <option>Maintenance</option>
+                            <option>Other</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="expense_amount">Amount:</label></td>
+                    <td><input type="number" id="expense_amount" name="expense_amount" min="0"
+                            placeholder="Enter amount" required></td>
+                </tr>
+                <tr>
+                    <td><label for="expense_date">Expense Date:</label></td>
+                    <td><input type="date" id="expense_date" name="expense_date" required></td>
+                </tr>
+                <tr>
+                    <td><label for="expense_note">Description:</label></td>
+                    <td><textarea id="expense_note" name="expense_note" rows="3" cols="25"
+                            placeholder="Enter details"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Add Expense"> <input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+        <h3>Expense List</h3>
+        <table border="1">
+            <tr>
+                <th>Expense ID</th>
+                <th>Expense Name</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>EXP-101</td>
+                <td>Electricity Bill</td>
+                <td>Utilities</td>
+                <td>3500</td>
+                <td>2026-10-05</td>
+                <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+            </tr>
+            <tr>
+                <td>EXP-102</td>
+                <td>Stationery</td>
+                <td>Stationery</td>
+                <td>1200</td>
+                <td>2026-10-10</td>
+                <td><button type="button">Edit</button> <button type="button">Delete</button></td>
+            </tr>
+        </table>
+    </fieldset>
+
+</body>
+
+</html>
