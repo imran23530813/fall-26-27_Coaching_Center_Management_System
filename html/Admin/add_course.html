@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoachEase - Add Course</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/style.css"> -->
 </head>
 
 <body>
 
     <h1>🎓 CoachEase</h1>
-    <h2>➕ Add New Course</h2>
+    <!-- <h2>➕ Add New Course</h2> -->
 
     <nav>
-        <a href="Dashboard.html">Dashboard</a>
+        <a href="Dashboard.html">Dashboard</a> |
         <a href="student_admission.html">Student Admission</a> |
         <a href="teacher_management.html">Teacher Management</a> |
         <a href="batch_management.html">Batch Management</a> |
@@ -23,16 +24,16 @@
     <br><br>
 
     <fieldset>
-        <legend>Course Information</legend>
+        <legend>➕Add Course Information</legend>
+
 
         <form method="post">
 
             <table>
+
                 <tr>
-                    <td>
-                        <label for="class">Select Class:</label>
-                    </td>
-                    <td>
+                    <td colspan="2">
+                        <label for="class">Select Class:</label><br>
                         <select id="class" name="class" required>
                             <option value="">-- Select Class --</option>
                             <option value="6">Class 6</option>
@@ -41,16 +42,14 @@
                             <option value="9">Class 9</option>
                             <option value="10">Class 10</option>
                             <option value="11">Class 11</option>
+                            <option value="12">Class 12</option>
                         </select>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
-                        <label for="cname">Course Name:</label>
-                    </td>
-
-                    <td>
+                    <td colspan="2">
+                        <label for="cname">Course Name:</label><br>
                         <select id="cname" name="cname" required>
                             <option value="">-- Select Course --</option>
                             <option value="Bangla">Bangla</option>
@@ -87,33 +86,30 @@
                 </tr>
 
                 <tr>
-                    <td>
-                        <label for="cdesc">Description:</label>
-                    </td>
-                    <td>
+                    <td colspan="2">
+                        <label for="cdesc">Description:</label><br>
                         <input type="text" id="cdesc" name="cdesc" placeholder="Describe something">
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
-                        <label for="cfee">Course Fee:</label>
-                    </td>
-                    <td>
+                    <td colspan="2">
+                        <label for="cfee">Course Fee:</label><br>
                         <input type="number" id="cfee" name="cfee" placeholder="Add amount" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td></td>
-                    <td>
+                    <td colspan="2" style="text-align: center;">
                         <input type="submit" value="Add Course">
                         <input type="reset" value="Reset">
                     </td>
                 </tr>
+
             </table>
 
         </form>
+
     </fieldset>
 
 </body>

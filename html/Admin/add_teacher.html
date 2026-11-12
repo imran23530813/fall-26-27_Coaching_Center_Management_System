@@ -5,55 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoachEase - Add New Teacher</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/style.css"> -->
 </head>
 
 <body>
 
     <h1>🎓 CoachEase</h1>
-    <h2>👨‍🏫 Add New Teacher</h2>
+    <!-- <h2>👨‍🏫 Add New Teacher</h2> -->
+    <nav>
 
-    <a href="Dashboard.html">Dashboard</a>
-    <a href="student_admission.html">Student Admission</a> |
-    <a href="teacher_management.html">Teacher Management</a> |
-    <a href="batch_management.html">Batch Management</a> |
-    <a href="course_management.html">Course Management</a>
+        <a href="Dashboard.html">Dashboard</a> |
+        <a href="student_admission.html">Student Admission</a> |
+        <a href="teacher_management.html">Teacher Management</a> |
+        <a href="batch_management.html">Batch Management</a> |
+        <a href="course_management.html">Course Management</a>
     </nav>
 
     <fieldset>
-        <legend>Create Teacher Account</legend>
+        <legend>👨‍🏫Create Teacher Account</legend>
+
 
         <form method="post">
 
             <table>
 
                 <tr>
-                    <td>First Name:</td>
-                    <td><input type="text" name="first_name" required></td>
+                    <td colspan="2">
+                        First Name:<br>
+                        <input type="text" name="first_name" required>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Last Name:</td>
-                    <td><input type="text" name="last_name" required></td>
+                    <td colspan="2">
+                        Last Name:<br>
+                        <input type="text" name="last_name" required>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Email Address:</td>
-                    <td><input type="email" name="email" required></td>
+                    <td colspan="2">
+                        Email Address:<br>
+                        <input type="email" name="email" required>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Phone Number:</td>
-                    <td><input type="tel" name="phone" required></td>
+                    <td colspan="2">
+                        Phone Number:<br>
+                        <input type="tel" name="phone" required>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Qualification:</td>
-                    <td><input type="text" name="qualification" required></td>
+                    <td colspan="2">
+                        Qualification:<br>
+                        <input type="text" name="qualification" required>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Select Class:</td>
-                    <td>
+                    <td colspan="2">
+                        Select Class:<br>
                         <select name="class" required>
                             <option value="">Select Class</option>
                             <option value="Class 6">Class 6</option>
@@ -67,25 +80,30 @@
                 </tr>
 
                 <tr>
-                    <td>Username:</td>
-                    <td><input type="text" name="username" required></td>
+                    <td colspan="2">
+                        Username:<br>
+                        <input type="text" name="username" required>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td>Password:</td>
-                    <td><input type="password" name="password" required></td>
+                    <td colspan="2">
+                        Password:<br>
+                        <input type="password" name="password" required>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td></td>
-                    <td>
+                    <td colspan="2" style="text-align: center;">
                         <input type="submit" value="Add Teacher">
                         <input type="reset" value="Reset">
                     </td>
                 </tr>
+
             </table>
 
         </form>
+
     </fieldset>
 
 </body>

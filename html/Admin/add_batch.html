@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CoachEase - Add New Batch</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 
 <body>
 
-    <h1>CoachEase</h1>
-    <h2>➕ Add New Batch</h2>
+    <h1>🎓CoachEase</h1>
+    <!-- <h2>➕ Add New Batch</h2> -->
 
     <nav>
-        <a href="Dashboard.html">Dashboard</a>
+        <a href="Dashboard.html">Dashboard</a> |
         <a href="student_admission.html">Student Admission</a> |
         <a href="teacher_management.html">Teacher Management</a> |
         <a href="batch_management.html">Batch Management</a> |
@@ -21,22 +23,23 @@
     </nav>
 
     <fieldset>
-        <legend>Create Batch</legend>
+        <legend>➕Create Batch</legend>
 
         <form method="post">
+
 
             <table>
 
                 <tr>
-                    <td>Batch Name:</td>
-                    <td>
+                    <td colspan="2">
+                        Batch Name:<br>
                         <input type="text" name="batch_name" placeholder="Enter batch name" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>Select Batch:</td>
-                    <td>
+                    <td colspan="2">
+                        Select Batch:<br>
                         <select name="batch_type" required>
                             <option value="" selected disabled>Select Batch</option>
                             <option value="Fall">Fall</option>
@@ -47,8 +50,8 @@
                 </tr>
 
                 <tr>
-                    <td>Select Class:</td>
-                    <td>
+                    <td colspan="2">
+                        Select Class:<br>
                         <select name="bclass" required>
                             <option value="" selected disabled>Select Class</option>
                             <option value="Class 6">Class 6</option>
@@ -63,8 +66,8 @@
                 </tr>
 
                 <tr>
-                    <td>Select Subject:</td>
-                    <td>
+                    <td colspan="2">
+                        Select Subject:<br>
                         <select name="bsubject" required>
                             <option value="" selected disabled>Select Subject</option>
                             <option value="Bangla">Bangla</option>
@@ -81,8 +84,8 @@
                 </tr>
 
                 <tr>
-                    <td>Select Day:</td>
-                    <td>
+                    <td colspan="2">
+                        Select Day:<br>
                         <select name="batch_day" required>
                             <option value="" selected disabled>Select Day</option>
                             <option value="Saturday">Saturday</option>
@@ -97,8 +100,8 @@
                 </tr>
 
                 <tr>
-                    <td>Start Time:</td>
-                    <td>
+                    <td colspan="2">
+                        Start Time:<br>
                         <select name="start_time" required>
                             <option value="" selected disabled>Select Start Time</option>
                             <option value="08:00 AM">08:00 AM</option>
@@ -125,8 +128,8 @@
                 </tr>
 
                 <tr>
-                    <td>Class Duration:</td>
-                    <td>
+                    <td colspan="2">
+                        Class Duration:<br>
                         <select name="duration" required>
                             <option value="1 hour 30 minutes">
                                 1 Hour 30 Minutes
@@ -136,8 +139,8 @@
                 </tr>
 
                 <tr>
-                    <td>End Time:</td>
-                    <td>
+                    <td colspan="2">
+                        End Time:<br>
                         <select name="end_time" required>
                             <option value="" selected disabled>Select End Time</option>
                             <option value="09:30 AM">09:30 AM</option>
@@ -161,8 +164,8 @@
                 </tr>
 
                 <tr>
-                    <td>Assigned Teacher:</td>
-                    <td>
+                    <td colspan="2">
+                        Assigned Teacher:<br>
                         <select name="teacher" required>
                             <option value="" selected disabled>Select Teacher</option>
                             <option value="Mr. Rahman">Mr. Rahman</option>
@@ -173,14 +176,14 @@
                 </tr>
 
                 <tr>
-                    <td></td>
-                    <td>
+                    <td colspan="2" style="text-align: center;">
                         <input type="submit" value="Create Batch">
                         <input type="reset" value="Reset">
                     </td>
                 </tr>
 
             </table>
+
 
         </form>
     </fieldset>

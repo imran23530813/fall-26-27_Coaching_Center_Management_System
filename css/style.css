@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*layout*/
+}
+
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    /* text color*/
+    background-color: #FBF4FF;
+    /* body color*/
+}
+
+/* Header and Nevigation bar */
+
+h1 {
+    text-align: center;
+    color: #000422;
+    padding: 15px 0 5px 0;
+    /* upper right lower left*/
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #1B1F3B;
+    padding: 12px 0px;
+    /*top-bottom, left-right*/
+    text-align: center;
+    width: 75%;
+    /* ata holo nav bar koto tuku jayga nibe left to right*/
+    margin: 0 auto;
+    /* atar jonno nav bar screen er middle a*/
+    border-radius: 40px;
+
+
+}
+
+/* nevigation link er kaz */
+
+nav a {
+    color: #A0A5C0;
+    text-decoration: none;
+    /* link underline gone*/
+    font-weight: bold;
+    padding: 8px 16px;
+    /*upper-lower , right-left*/
+    margin: 0 4px;
+    display: inline-block;
+    border-radius: 4px;
+    /* border round kore*/
+    transition: background-color 0.3s, color 0.3s;
+
+
+
+
+}
+
+nav a:hover {
+    background-color: #2E345D;
+    color: #479D56;
+}
+
+/* Form j box er moddhe ache */
+fieldset {
+    max-width: 515px;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid #2a316b;
+    border-radius: 14px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+    padding: 20px 24px;
+    position: relative;
+
+
+
+
+}
+
+legend {
+
+    width: auto;
+    background-color: transparent;
+    color: #2a316b;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0px 10px;
+    margin-left: 15px;
+    box-sizing: border-box;
+    display: block;
+
+
+
+}
+
+form {
+    padding: 0 24px 24px 24px;
+    /*form er maje text elecment ana*/
+    clear: both;
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+td {
+    padding: 8px, 0;
+    vertical-align: top;
+}
+
+/* Form inputs */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 10px;
+    /* text field er size baray*/
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    /* place holder text size*/
+    background-color: #FFFFFF;
+    transition: border-color 0.2s, box-shadow 0.2;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2a316b;
+    box-shadow: 0 0 0 3px rgba(142, 108, 200, 0.15);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background-color: #1B1F3B;
+    color: #FBF4FF;
+    border-color: black;
+    width: 48%;
+    padding: 10px 0;
+    margin-top: 10px;
+    margin-right: 50%;
+    text-align: center;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+
+}
+
+button:hover,
+input[type="submit"][value="Create Batch"]:hover {
+    background-color: #479D56;
+    color: white;
+}
+
+button:hover,
+td input[type="reset"][value="Reset"]:hover {
+    background-color: #D9534F;
+}
