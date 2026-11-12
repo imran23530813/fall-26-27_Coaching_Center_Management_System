@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salary</title>
+    <link rel="stylesheet" href="style4.css">
 </head>
 
 <body>
+
+    <nav>
+        <a href="student_fee_collection.html">Student Fee Collection</a>
+        <a href="expense_tracking.html">Expense Tracking</a>
+        <a href="salary_management.html">Salary Management</a>
+    </nav>
 
     <fieldset>
         <h2>Salary Management</h2>
@@ -24,17 +31,20 @@
                 </tr>
                 <tr>
                     <td><label for="staff_role">Role:</label></td>
-                    <td><select id="staff_role" name="staff_role" required>
+                    <td>
+                        <select id="staff_role" name="staff_role" required>
                             <option value="" selected disabled>Select Role</option>
                             <option>Teacher</option>
                             <option>Admin Staff</option>
                             <option>Accountant</option>
                             <option>Other Staff</option>
-                        </select></td>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="salary_month">Salary Month:</label></td>
-                    <td><select id="salary_month" name="salary_month" required>
+                    <td>
+                        <select id="salary_month" name="salary_month" required>
                             <option value="" selected disabled>Select Month</option>
                             <option>January</option>
                             <option>February</option>
@@ -48,7 +58,8 @@
                             <option>October</option>
                             <option>November</option>
                             <option>December</option>
-                        </select></td>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="salary_amount">Salary Amount:</label></td>
@@ -57,11 +68,13 @@
                 </tr>
                 <tr>
                     <td><label for="salary_status">Payment Status:</label></td>
-                    <td><select id="salary_status" name="salary_status" required>
+                    <td>
+                        <select id="salary_status" name="salary_status" required>
                             <option value="" selected disabled>Select Status</option>
                             <option value="Paid">Paid</option>
                             <option value="Pending">Pending</option>
-                        </select></td>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -69,6 +82,7 @@
                 </tr>
             </table>
         </form>
+
         <h3>Salary List</h3>
         <table border="1">
             <tr>

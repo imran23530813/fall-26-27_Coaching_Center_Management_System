@@ -5,10 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense</title>
+    <link rel="stylesheet" href="style4.css">
 </head>
 
 <body>
-    <hr>
+
+    <nav>
+        <a href="student_fee_collection.html">Student Fee Collection</a>
+        <a href="expense_tracking.html">Expense Tracking</a>
+        <a href="salary_management.html">Salary Management</a>
+    </nav>
 
     <fieldset>
         <h2>Expense Tracking</h2>
@@ -21,14 +27,16 @@
                 </tr>
                 <tr>
                     <td><label for="expense_category">Category:</label></td>
-                    <td><select id="expense_category" name="expense_category" required>
+                    <td>
+                        <select id="expense_category" name="expense_category" required>
                             <option value="" selected disabled>Select Category</option>
                             <option>Utilities</option>
                             <option>Rent</option>
                             <option>Stationery</option>
                             <option>Maintenance</option>
                             <option>Other</option>
-                        </select></td>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><label for="expense_amount">Amount:</label></td>
@@ -50,6 +58,7 @@
                 </tr>
             </table>
         </form>
+
         <h3>Expense List</h3>
         <table border="1">
             <tr>
