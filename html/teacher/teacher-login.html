@@ -4,46 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Login</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <title>Teacher Login - IIST LMP</title>
+   <link rel="stylesheet" href="../../Style5.css">
 
 <body>
+    <!-- ===== CLASS-13: HEADER START ===== -->
     <header>
         <h1>Coaching Management System</h1>
+        <p>Learn Skills for a Better Future</p>
     </header>
+    <!-- ===== CLASS-13: HEADER END ===== -->
 
+    <!-- ===== CLASS-13: NAVIGATION START ===== -->
     <nav>
-        <a href="teacher-dashboard.html">Dashboard</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="exams.html">Exams</a>
-        <a href="results.html">Results</a>
-        <a href="assignments.html">Assignments</a>
+        <a href="index.html">Home</a> |
+        <a href="teacher-dashboard.html">Teacher Dashboard</a> |
+
+        <a href="teacher-login.html">Teacher Login</a>
     </nav>
+    <!-- ===== CLASS-13: NAVIGATION END ===== -->
+
+    <!-- ===== CLASS-13: TEACHER LOGIN START ===== -->
     <main>
+        <marquee behavior="" direction="">
+            <h4>🎓 Welcome to the Teacher Portal, track your students’ progress here</h4>
+        </marquee>
         <section class="teacher-login-section">
             <h2>Teacher Login</h2>
-            <p>Enter your teacher account details</p>
-            <form>
+            <p>Enter your teacher account details.</p>
+            <!-- ===== CLASS-JS-22: TEACHER LOGIN FORM START (REPLACE) ===== -->
+            <form id="teacherLoginForm">
                 <label for="teacherEmail">Email</label>
-                <input type="email" id="teacherEmail" name="email" placeholder="Teacher email" required>
+                <input type="email" id="teacherEmail" required>
 
                 <label for="teacherPassword">Password</label>
-                <input type="password" id="teacherPassword" name="password" placeholder="Password" minlength="8"
-                    required>
+                <input type="password" id="teacherPassword" minlength="6" required>
 
-                <button type="button">Login</button>
+                <button type="submit">Login</button>
+                <p id="teacherLoginMessage" aria-live="polite"></p>
             </form>
-            <p class="teacher-login-note">
-                Teacher accounts will be managed by Admin later.
-            </p>
+            <!-- ===== CLASS-JS-22: TEACHER LOGIN FORM END ===== -->
+
         </section>
     </main>
+    <!-- ===== CLASS-13: TEACHER LOGIN END ===== -->
 
+    <!-- ===== CLASS-13: FOOTER START ===== -->
     <footer>
-        <p>&copy; 2026 Coaching Management System</p>
+        <p>&copy; 2026 IIST Polytechnic Institute.
+            All Rights Reserved.</p>
     </footer>
-
+    <!-- ===== CLASS-13: FOOTER END ===== -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -4,26 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Management</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Exam Management - IIST LMP</title>
+    <link rel="stylesheet" href="../../Style5.css">
+    <!-- ===== CLASS-JS-27: EXAM GUARD START (ADD) ===== -->
+    <script>
+        if (sessionStorage.getItem("lmpTeacherLogin") !== "true" ||
+            !sessionStorage.getItem("lmpTeacherEmail")) {
+            location.replace("teacher-login.html");
+        }
+    </script>
+    <!-- ===== CLASS-JS-27: EXAM GUARD END ===== -->
+
 </head>
 
 <body>
+    <!-- ===== CLASS-16: TEACHER HEADER START ===== -->
     <header>
         <h1>Coaching Management System</h1>
+        <marquee behavior="" direction="">
+            <h4>🎓 Welcome to the Teacher Portal, track your students’ progress here</h4>
+        </marquee>
         <p>Teacher Panel - Exam Management</p>
         <nav>
-            <a href="teacher-dashboard.html">Dashboard</a>
-            <a href="attendance.html">Attendance</a>
-            <a href="exams.html">Exams</a>
-            <a href="results.html">Results</a>
+            <a href="index.html">Home</a> |
+            <a href="teacher-dashboard.html">Dashboard</a> |
+            <a href="attendance.html">Attendance</a> |
+            <a href="exams.html">Exams</a> |
+            <a href="results.html">Results</a> |
             <a href="assignments.html">Assignments</a>
         </nav>
     </header>
-    <!-- form strt -->
+    <!-- ===== CLASS-16: TEACHER HEADER END ===== -->
+
+    <!-- ===== CLASS-16: EXAM FORM START ===== -->
     <main class="exam-page">
         <h2>Create Exam Schedule</h2>
-        <p>Enter exam information below </p>
+        <p>Enter exam information below (demo only).</p>
         <form id="examForm">
             <div class="exam-fields">
                 <div>
@@ -33,15 +49,15 @@
                 <div>
                     <label for="examCourse">Course</label>
                     <select id="examCourse" name="course" required>
-                        <option value="">Select Course</option>
-                        <option value="physics">Physics</option>
-                        <option value="math">Math</option>
-                        <option value="english">English</option>
+                        <option value>Select Course</option>
+                        <option value="wd-l3">Web Development L3</option>
+                        <option value="gd-l3">Graphic Design L3</option>
+                        <option value="dm-l3">Digital Marketing L3</option>
                     </select>
                 </div>
                 <div>
-                    <label for="examSubject">Subject</label>
-                    <input type="text" id="examSubject" name="subject" placeholder="Subject" required>
+                    <label for="examSubject">Subject / Topic</label>
+                    <input type="text" id="examSubject" name="subject" placeholder="HTML Basics" required>
                 </div>
                 <div>
                     <label for="examDate">Exam Date</label>
@@ -56,11 +72,16 @@
                     <input type="number" id="totalMarks" name="marks" min="1" max="1000" required>
                 </div>
             </div>
-            <button type="button">Save Exam</button>
+            <!-- ===== CLASS-JS-27: SAVE EXAM START (REPLACE) ===== -->
+            <button type="submit">Save Exam</button>
+            <p id="examMessage"></p>
+            <!-- ===== CLASS-JS-27: SAVE EXAM END ===== -->
+
         </form>
     </main>
-    <!-- form end -->
-    <!-- schedul table strt -->
+    <!-- ===== CLASS-16: EXAM FORM END ===== -->
+
+    <!-- ===== CLASS-16: EXAM SCHEDULE TABLE START ===== -->
     <section class="exam-page">
         <h2>Sample Exam Schedule</h2>
         <div class="exam-table-wrap">
@@ -76,33 +97,16 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Test</td>
-                        <td>Physics</td>
-                        <td>HSC</td>
-                        <td>2026-11-15</td>
-                        <td>10:00 AM</td>
-                        <td>50</td>
-                        <td>Edit / Delete (Later)</td>
-                    </tr>
-                    <tr>
-                        <td>Quiz 1</td>
-                        <td>MATH</td>
-                        <td>HSC</td>
-                        <td>2026-11-18</td>
-                        <td>11:00 AM</td>
-                        <td>20</td>
-                        <td>Edit / Delete (Later)</td>
-                    </tr>
-                </tbody>
+                <!-- ===== CLASS-JS-27: EXAM TABLE START (REPLACE) ===== -->
+                <tbody id="examTableBody"></tbody>
+                <!-- ===== CLASS-JS-27: EXAM TABLE END ===== -->
+
             </table>
         </div>
-
+        <p class="exam-note">Sample data only. No exam is saved yet.</p>
     </section>
-    <footer>
-        <p>&copy; 2026 Coaching Management System</p>
-    </footer>
+    <!-- ===== CLASS-16: EXAM SCHEDULE TABLE END ===== -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>

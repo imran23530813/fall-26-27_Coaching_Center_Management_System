@@ -5,26 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Dashboard | IIST LMP</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../Style5.css">
+    <!-- ===== CLASS-JS-22: TEACHER DASHBOARD GUARD START (ADD) ===== -->
+    <script>
+        if (sessionStorage.getItem("lmpTeacherLogin") !== "true" ||
+            !sessionStorage.getItem("lmpTeacherEmail")) {
+            location.replace("teacher-login.html");
+        }
+    </script>
+    <!-- ===== CLASS-JS-22: TEACHER DASHBOARD GUARD END ===== -->
+
 </head>
 
 <body>
+    <!-- ===== CLASS-14: TEACHER HEADER START ===== -->
     <header>
         <h1>Coaching Management System</h1>
         <p>Teacher Panel</p>
     </header>
-
+    <!-- ===== CLASS-14: TEACHER HEADER END ===== -->
+    <!-- ===== CLASS-14: TEACHER NAV START ===== -->
     <nav>
-        <a href="teacher-dashboard.html">Dashboard</a>
-        <a href="attendance.html">Attendance</a>
-        <a href="exams.html">Exams</a>
-        <a href="results.html">Results</a>
+        <a href="index.html">Home</a> |
+        <a href="teacher-dashboard.html">Dashboard</a> |
+        <a href="attendance.html">Attendance</a> |
+        <a href="exams.html">Exams</a> |
+        <a href="results.html">Results</a> |
         <a href="assignments.html">Assignments</a>
     </nav>
 
-    <!-- dashboard strt -->
+    <!-- ===== CLASS-14: TEACHER NAV END ===== -->
+    <!-- ===== CLASS-14: DASHBOARD START ===== -->
     <main class="teacher-dashboard">
+        <marquee behavior="" direction="">
+            <h4>🎓 Welcome to the Teacher Portal, track your students’ progress here</h4>
+        </marquee>
         <h2>Teacher Dashboard</h2>
+        <!-- ===== CLASS-JS-24: WELCOME & LOGOUT START (ADD) ===== -->
+        <div class="teacher-dashboard-top">
+            <p id="teacherWelcome">Welcome, Teacher!</p>
+            <button type="button" id="teacherLogoutBtn">Logout</button>
+        </div>
+        <!-- ===== CLASS-JS-24: WELCOME & LOGOUT END ===== -->
+
+        <!-- ===== CLASS-JS-23: TEACHER PROFILE START (ADD) ===== -->
+        <section class="teacher-profile">
+            <h3>My Profile</h3>
+            <p><strong>Name:</strong> <span id="profileTeacherName"></span></p>
+            <p><strong>Mobile:</strong> <span id="profileTeacherMobile"></span></p>
+            <p><strong>Email:</strong> <span id="profileTeacherEmail"></span></p>
+            <p><strong>Expertise:</strong> <span id="profileTeacherExpertise"></span></p>
+            <p><strong>Status:</strong> <span id="profileTeacherStatus"></span></p>
+            <p id="teacherProfileMessage"></p>
+        </section>
+        <!-- ===== CLASS-JS-23: TEACHER PROFILE END ===== -->
+
         <p>Select a module to manage your teaching work.</p>
         <div class="teacher-grid">
             <section class="teacher-card">
@@ -49,10 +84,14 @@
             </section>
         </div>
     </main>
-    <!--dashboard end-->
+    <!-- ===== CLASS-14: DASHBOARD END ===== -->
+
+    <!-- ===== CLASS-14: FOOTER START ===== -->
     <footer>
-        <p>&copy; 2026 Coaching Management System</p>
+        <p>&copy; 2026 IIST Polytechnic Institute.</p>
     </footer>
+    <!-- ===== CLASS-14: FOOTER END ===== -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,702 @@
+/* BASIC PAGE STYLE START ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/*  BASIC PAGE STYLE END ===== */
+
+/* HEADER STYLE START ===== */
+header {
+    background-color: #174a75;
+    color: white;
+    text-align: center;
+    padding: 24px 12px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 6px 0 0;
+}
+
+/*  HEADER STYLE END ===== */
+
+/*  NAVIGATION STYLE START ===== */
+nav {
+    background-color: #dceaf5;
+    text-align: center;
+    padding: 14px;
+}
+
+nav a {
+    color: #123e61;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #b12b2b;
+    text-decoration: underline;
+}
+
+/* NAVIGATION STYLE END ===== */
+
+/* MAIN SECTION STYLE START ===== */
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+section {
+    background-color: white;
+    padding: 24px;
+    border: 1px solid #d7e0e8;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #174a75;
+}
+
+section ul {
+    padding-left: 25px;
+}
+
+/*  MAIN SECTION STYLE END ===== */
+
+/* FOOTER STYLE START ===== */
+footer {
+    background-color: #174a75;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+/*  FOOTER STYLE END ===== */
+/* TEACHER LOGIN CSS START (ADD) ===== */
+.teacher-login-section {
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+.teacher-login-section h2 {
+    text-align: center;
+    color: #17476b;
+}
+
+.teacher-login-section label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.teacher-login-section input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px;
+    margin-top: 5px;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+.teacher-login-section button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: #17618a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.teacher-login-section button:hover {
+    background-color: #104563;
+}
+
+.teacher-login-note {
+    font-size: 13px;
+    color: #555555;
+}
+
+/* TEACHER LOGIN CSS END  */
+/*  TEACHER DASHBOARD START  */
+.teacher-dashboard {
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.teacher-dashboard h2 {
+    text-align: center;
+}
+
+.teacher-dashboard>p {
+    text-align: center;
+}
+
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.teacher-card {
+    background: white;
+    border: 1px solid #d5dce4;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.teacher-card h3 {
+    color: #184a70;
+}
+
+.teacher-card a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #17618a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.teacher-card a:hover {
+    background: #104563;
+}
+
+@media (max-width: 650px) {
+    .teacher-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*  TEACHER DASHBOARD END ===== */
+/*  ATTENDANCE STYLE START ===== */
+.attendance-page {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.attendance-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.attendance-fields label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.attendance-fields select,
+.attendance-fields input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.attendance-table-wrap {
+    overflow-x: auto;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+.attendance-table th {
+    background: #e8f1fa;
+}
+
+.attendance-table td:nth-child(2) {
+    text-align: left;
+}
+
+.attendance-note {
+    color: #555;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .attendance-fields {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ATTENDANCE STYLE END ===== */
+/* EXAM MANAGEMENT STYLE START ===== */
+.exam-page {
+    max-width: 1050px;
+    margin: 25px auto;
+    padding: 22px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.exam-page h2 {
+    margin-bottom: 14px;
+}
+
+.exam-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 18px 0;
+}
+
+.exam-fields label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.exam-fields input,
+.exam-fields select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.exam-page button {
+    padding: 10px 18px;
+    background: #145b91;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.exam-table-wrap {
+    overflow-x: auto;
+}
+
+.exam-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.exam-table th,
+.exam-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.exam-table th {
+    background: #e8f1fa;
+}
+
+.exam-note {
+    color: #555;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .exam-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-page {
+        margin: 12px;
+        padding: 14px;
+    }
+}
+
+/* EXAM MANAGEMENT STYLE END ===== */
+/* RESULT MANAGEMENT CSS START ===== */
+.result-header {
+    text-align: center;
+    padding: 22px;
+    background: #174a72;
+    color: white;
+}
+
+.result-container {
+    max-width: 1050px;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+.result-form {
+    display: grid;
+    gap: 10px;
+    max-width: 550px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.result-form label {
+    font-weight: bold;
+}
+
+.result-form input,
+.result-form select {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.result-form button,
+.result-publish {
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 5px;
+    background: #176a9d;
+    color: white;
+    cursor: pointer;
+}
+
+.result-table-wrap {
+    overflow-x: auto;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px;
+}
+
+.result-table th,
+.result-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.result-table th {
+    background: #e8f1f8;
+}
+
+.result-note {
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .result-container {
+        padding: 12px;
+    }
+
+    .result-form {
+        padding: 12px;
+    }
+}
+
+/* RESULT MANAGEMENT CSS END  */
+/*  ASSIGNMENT MANAGEMENT CSS START  */
+.teacher-page-header {
+    text-align: center;
+    padding: 20px;
+    background: #164b76;
+    color: white;
+}
+
+.teacher-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    padding: 12px;
+    background: #e9f2fa;
+}
+
+.teacher-nav a {
+    color: #164b76;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.assignment-container {
+    width: 90%;
+    max-width: 950px;
+    margin: 25px auto;
+}
+
+.assignment-container h2 {
+    margin-top: 25px;
+}
+
+.assignment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding: 20px;
+    border: 1px solid #d8e1ea;
+    border-radius: 8px;
+}
+
+.assignment-form input,
+.assignment-form select,
+.assignment-form textarea {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font: inherit;
+}
+
+.assignment-form button {
+    padding: 11px;
+    background: #164b76;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.assignment-table-wrap {
+    overflow-x: auto;
+}
+
+.assignment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+.assignment-table th,
+.assignment-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.assignment-table th {
+    background: #e9f2fa;
+}
+
+/* ASSIGNMENT MANAGEMENT CSS END ===== */
+/*  ADMIN TEACHER STYLE START ===== */
+.admin-teacher-header {
+    background: #17365d;
+    color: white;
+    padding: 22px 16px;
+    text-align: center;
+}
+
+.admin-teacher-nav {
+    margin-top: 14px;
+}
+
+.admin-teacher-nav a {
+    display: inline-block;
+    color: black;
+    margin: 5px 9px;
+    text-decoration: none;
+}
+
+.admin-teacher-nav a:hover {
+    text-decoration: underline;
+}
+
+.admin-teacher-main {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 0 16px;
+}
+
+.admin-teacher-panel {
+    background: #fff;
+    border: 1px solid #dce3eb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.admin-teacher-form {
+    display: grid;
+    gap: 10px;
+    max-width: 540px;
+}
+
+.admin-teacher-form input,
+.admin-teacher-form select {
+    padding: 10px;
+    border: 1px solid #b8c4d1;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.admin-teacher-form button,
+.admin-teacher-table button {
+    background: #1765a3;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.admin-teacher-table-wrap {
+    overflow-x: auto;
+}
+
+.admin-teacher-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+.admin-teacher-table th,
+.admin-teacher-table td {
+    border: 1px solid #d5dee7;
+    padding: 10px;
+    text-align: left;
+}
+
+.admin-teacher-table th {
+    background: #eaf1f8;
+}
+
+.admin-teacher-table td button {
+    margin: 3px;
+}
+
+.admin-teacher-note {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .admin-teacher-panel {
+        padding: 12px;
+    }
+
+    .admin-teacher-nav a {
+        margin: 4px;
+    }
+}
+
+/* ADMIN TEACHER STYLE END ===== */
+/*  TEACHER MODAL START (ADD) ===== */
+#teacherViewModal:not([hidden]),
+#teacherEditModal:not([hidden]) {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.teacher-modal-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: min(450px, 95%);
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.teacher-modal-box label,
+.teacher-modal-box input,
+.teacher-modal-box select {
+    display: block;
+    width: 100%;
+    margin: 7px 0;
+}
+
+/* ===== CLASS-JS-21: TEACHER MODAL END ===== */
+
+/* ===== CLASS-JS-23: TEACHER PROFILE STYLE START (ADD) ===== */
+.teacher-profile {
+    padding: 18px;
+    margin: 18px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.teacher-profile p {
+    margin: 8px 0;
+}
+
+/* TEACHER PROFILE STYLE END ===== */
+/* DASHBOARD TOP START (ADD) ===== */
+.teacher-dashboard-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+#teacherWelcome {
+    font-weight: bold;
+}
+
+#teacherLogoutBtn {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* DASHBOARD TOP END ===== */
+/* RESULT TABLE STYLE START ===== */
+
+.teacher-results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.teacher-results th,
+.teacher-results td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.teacher-results input[type="number"] {
+    width: 80px;
+    padding: 6px;
+}
+
+/* RESULT TABLE STYLE END ===== */
+/* SUMMARY STYLE START (ADD) ===== */
+.teacher-results {
+    overflow-x: auto;
+}
+
+.teacher-results table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.teacher-results th,
+.teacher-results td {
+    border: 1px solid #ddd;
+    padding: 9px;
+    text-align: left;
+}
+
+/*SUMMARY STYLE END ===== */

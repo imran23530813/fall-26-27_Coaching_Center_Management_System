@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Teacher Management </title>
+    <link rel="stylesheet" href="../../Style5.css">
+</head>
+
+<body>
+    <header class="admin-teacher-header">
+        <h1>Coaching Management System</h1>
+        <p>Admin Panel — Teacher Management</p>
+        <nav class="admin-teacher-nav" aria-label="Admin navigation">
+            <a href="index.html">Home</a>
+            <a href="admin-teachers.html" aria-current="page">Teachers</a>
+            <a href="teacher-login.html">Teacher-Login</a>
+        </nav>
+    </header>
+
+    <main class="admin-teacher-main">
+        <marquee behavior="" direction="">
+            <h4>🎓 Welcome to the Teacher Portal, track your students’ progress here</h4>
+        </marquee>
+        <section class="admin-teacher-panel">
+            <h2>Teacher Registration</h2>
+            <!-- ADMIN TEACHER FORM START -->
+            <form id="teacherForm" class="admin-teacher-form">
+                <label for="teacherName">Teacher Name</label>
+                <input id="teacherName" type="text" required>
+
+                <label for="teacherMobile">Mobile Number</label>
+                <input id="teacherMobile" type="tel" pattern="01[0-9]{9}" required>
+
+                <label for="teacherEmail">Email Address</label>
+                <input id="teacherEmail" type="email" required>
+
+                <label for="teacherExpertise">Expertise</label>
+                <select id="teacherExpertise" required>
+                    <option value>Select Expertise</option>
+                    <option>Web Development</option>
+                    <option>Digital Marketing</option>
+                    <option>Graphic Design</option>
+                </select>
+
+                <label for="teacherPassword">Password (Demo)</label>
+                <input id="teacherPassword" type="password" minlength="6" required>
+
+                <button type="submit">Add Teacher</button>
+                <p id="teacherMessage" aria-live="polite"></p>
+            </form>
+            <!-- ADMIN TEACHER FORM END -->
+
+        </section>
+
+        <!-- TEACHER LIST START  -->
+        <section class="admin-teacher-panel">
+            <h2>Teacher List</h2>
+            <div class="admin-teacher-table-wrap">
+                <table class="admin-teacher-table">
+                    <thead>
+                        <tr>
+                            <th>SL</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Expertise</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="teacherTableBody"></tbody>
+                </table>
+            </div>
+            <p id="teacherListMessage"></p>
+        </section>
+
+        <div id="teacherViewModal" hidden>
+            <div class="teacher-modal-box">
+                <h3>Teacher Details</h3>
+                <p id="teacherViewText"></p>
+                <button type="button" onclick="closeTeacherView()">Close</button>
+            </div>
+        </div>
+
+        <div id="teacherEditModal" hidden>
+            <div class="teacher-modal-box">
+                <h3>Edit Teacher</h3>
+                <form id="teacherEditForm">
+                    <label for="editTeacherName">Name</label>
+                    <input id="editTeacherName" type="text" required>
+                    <label for="editTeacherMobile">Mobile</label>
+                    <input id="editTeacherMobile" type="tel" pattern="01[0-9]{9}" required>
+                    <label for="editTeacherEmail">Email</label>
+                    <input id="editTeacherEmail" type="email" required>
+                    <label for="editTeacherExpertise">Expertise</label>
+                    <select id="editTeacherExpertise" required>
+                        <option>Web Development</option>
+                        <option>Digital Marketing</option>
+                        <option>Graphic Design</option>
+                    </select>
+                    <button type="submit">Update Teacher</button>
+                    <button type="button" onclick="closeTeacherEdit()">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <!-- TEACHER LIST END-->
+
+    </main>
+    <!--ADMIN TEACHERS END-->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
