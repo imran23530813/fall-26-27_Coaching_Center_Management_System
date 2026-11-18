@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Add Course</title>
+    <link rel="stylesheet" type="text/css" href="../fall-26-27_Coaching_Center_Management_System/css/add_admin.css">
+</head>
+
+<body>
+
+    <h1>🎓 CoachEase</h1>
+
+    <nav>
+        <a href="Dashboard_admin.html">Dashboard</a> |
+        <a href="student_admission_admin.html">Student Admission</a> |
+        <a href="teacher_management_admin.html">Teacher Management</a> |
+        <a href="batch_management_admin.html">Batch Management</a> |
+        <a href="course_management_admin.html">Course Management</a>
+    </nav>
+
+    <br><br>
+
+    <fieldset>
+        <legend>➕ Add Course Information</legend>
+
+        <form method="post">
+
+            <table>
+
+                <!-- Course Name -->
+                <tr>
+                    <td colspan="2">
+                        <label for="cname">Course Name:</label><br>
+                        <input type="text" id="cname" name="cname" placeholder="Enter course name" required>
+                    </td>
+                </tr>
+
+                <!-- Course Description -->
+                <tr>
+                    <td colspan="2">
+                        <label for="cdesc">Course Description:</label><br>
+                        <textarea id="cdesc" name="cdesc" placeholder="Write course description" rows="4" cols="40"
+                            required></textarea>
+                    </td>
+                </tr>
+
+                <!-- Course Fee -->
+                <tr>
+                    <td colspan="2">
+                        <label for="cfee">Monthly Course Fee (BDT):</label><br>
+                        <input type="number" id="cfee" name="cfee" placeholder="Enter monthly fee" min="1" required>
+                    </td>
+                </tr>
+
+                <!-- Buttons -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Add Course">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </fieldset>
+
+    <br>
+
+</body>
+
+</html>

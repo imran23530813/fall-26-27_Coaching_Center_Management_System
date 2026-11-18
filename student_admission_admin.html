@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Student Admission</title>
+    <link rel="stylesheet" type="text/css"
+        href="../fall-26-27_Coaching_Center_Management_System/css/managemnt_admin.css">
+</head>
+
+<body>
+
+    <h1>🎓CoachEase</h1>
+
+    <nav>
+        <a href="Dashboard_admin.html">Dashboard</a> |
+        <a href="student_admission_admin.html">Student Admission</a> |
+        <a href="teacher_management_admin.html">Teacher Management</a> |
+        <a href="batch_management_admin.html">Batch Management</a> |
+        <a href="course_management_admin.html">Course Management</a>
+    </nav>
+
+    <fieldset>
+        <legend>Student Enrolment</legend>
+
+        <label for="student_level">Select Level:</label>
+        <select id="student_level" name="student_level">
+            <option value="">Select Level</option>
+            <option value="L-1">L-1</option>
+            <option value="L-2">L-2</option>
+            <option value="L-3">L-3</option>
+        </select>
+
+        <label for="student_course">Select Course:</label>
+        <select id="student_course" name="student_course">
+            <option value="">Select Course</option>
+            <option value="CRS-101">Web Development</option>
+            <option value="CRS-102">Graphic Design</option>
+            <option value="CRS-103">Digital Marketing</option>
+            <option value="CRS-104">Programming Fundamentals</option>
+            <option value="CRS-105">UI/UX Design</option>
+            <option value="CRS-106">Data Science</option>
+        </select>
+
+        <label for="student_batch">Select Batch:</label>
+        <select id="student_batch" name="student_batch">
+            <option value="">Select Batch</option>
+            <option value="BAT-101">BAT-101 (Fall)</option>
+            <option value="BAT-102">BAT-102 (Spring)</option>
+            <option value="BAT-103">BAT-103 (Summer)</option>
+            <option value="BAT-104">BAT-104 (Fall)</option>
+            <option value="BAT-105">BAT-105 (Spring)</option>
+            <option value="BAT-106">BAT-106 (Summer)</option>
+        </select>
+
+        <a href="add_student_admin.html">
+            <input type="button" value="Add New Student">
+        </a>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>📋 Student List</legend>
+
+        <table border="1">
+
+            <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Level</th>
+                <th>Course Name</th>
+                <th>Batch ID</th>
+                <th>Admission Date</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>STU-101</td>
+                <td>Rahim</td>
+                <td>Ahmed</td>
+                <td>rahim@gmail.com</td>
+                <td>L-3</td>
+                <td>Web Development</td>
+                <td>BAT-101</td>
+                <td>01-11-2026</td>
+                <td>01712345678</td>
+                <td>Uttara, Dhaka</td>
+                <td>Active</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>STU-102</td>
+                <td>Karim</td>
+                <td>Hasan</td>
+                <td>karim@gmail.com</td>
+                <td>L-3</td>
+                <td>Graphic Design</td>
+                <td>BAT-102</td>
+                <td>02-11-2026</td>
+                <td>01812345678</td>
+                <td>Mirpur, Dhaka</td>
+                <td>Active</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>STU-103</td>
+                <td>Sumaiya</td>
+                <td>Akter</td>
+                <td>sumaiya@gmail.com</td>
+                <td>L-2</td>
+                <td>Programming Fundamentals</td>
+                <td>BAT-104</td>
+                <td>03-11-2026</td>
+                <td>01912345678</td>
+                <td>Banani, Dhaka</td>
+                <td>Inactive</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+        </table>
+
+    </fieldset>
+
+</body>
+
+</html>

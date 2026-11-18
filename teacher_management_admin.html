@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Teacher Management</title>
+    <link rel="stylesheet" type="text/css"
+        href="../fall-26-27_Coaching_Center_Management_System/css/managemnt_admin.css">
+</head>
+
+<body>
+
+    <h1>🎓CoachEase</h1>
+
+    <nav>
+        <a href="Dashboard_admin.html">Dashboard</a> |
+        <a href="student_admission_admin.html">Student Admission</a> |
+        <a href="teacher_management_admin.html">Teacher Management</a> |
+        <a href="batch_management_admin.html">Batch Management</a> |
+        <a href="course_management_admin.html">Course Management</a>
+    </nav>
+
+    <fieldset>
+        <legend>Teacher List</legend>
+
+        <!-- Select Level -->
+        <label for="teacher_level">Select Level:</label>
+
+        <select id="teacher_level" name="level">
+            <option value="">All Levels</option>
+            <option value="L-1">L-1</option>
+            <option value="L-2">L-2</option>
+            <option value="L-3">L-3</option>
+        </select>
+
+        <!-- Select Course -->
+        <label for="teacher_course">Select Course:</label>
+
+        <select id="teacher_course" name="course_id">
+            <option value="">All Courses</option>
+            <option value="CRS-101">Web Development</option>
+            <option value="CRS-102">Graphic Design</option>
+            <option value="CRS-103">Digital Marketing</option>
+            <option value="CRS-104">Programming Fundamentals</option>
+            <option value="CRS-105">UI/UX Design</option>
+            <option value="CRS-106">Data Science</option>
+        </select>
+
+        <a href="add_teacher_admin.html">
+            <input type="button" value="Add New Teacher">
+        </a>
+
+        <br><br>
+
+        <table border="1">
+
+            <tr>
+                <th>Teacher ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Level</th>
+                <th>Course Name</th>
+                <th>Qualification</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>TCH-101</td>
+                <td>Rahman</td>
+                <td>Ahmed</td>
+                <td>rahman@gmail.com</td>
+                <td>L-3</td>
+                <td>Web Development</td>
+                <td>M.Sc in Computer Science</td>
+                <td>01712345678</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>TCH-102</td>
+                <td>Sultana</td>
+                <td>Akter</td>
+                <td>sultana@gmail.com</td>
+                <td>L-2</td>
+                <td>Graphic Design</td>
+                <td>B.Sc in Graphic Design</td>
+                <td>01812345678</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>TCH-103</td>
+                <td>Karim</td>
+                <td>Hasan</td>
+                <td>karim@gmail.com</td>
+                <td>L-1</td>
+                <td>Programming Fundamentals</td>
+                <td>M.Sc in Computer Science</td>
+                <td>01912345678</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+        </table>
+
+    </fieldset>
+
+</body>
+
+</html>

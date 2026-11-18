@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Batch Management</title>
+    <link rel="stylesheet" type="text/css"
+        href="../fall-26-27_Coaching_Center_Management_System/css/managemnt_admin.css">
+</head>
+
+<body>
+
+    <h1>🎓 CoachEase</h1>
+
+    <nav>
+        <a href="Dashboard_admin.html">Dashboard</a> |
+        <a href="student_admission_admin.html">Student Admission</a> |
+        <a href="teacher_management_admin.html">Teacher Management</a> |
+        <a href="batch_management_admin.html">Batch Management</a> |
+        <a href="course_management_admin.html">Course Management</a>
+    </nav>
+
+    <br><br>
+
+    <fieldset>
+        <legend>📑 Batch List</legend>
+
+        <!-- Select Batch Type -->
+        <label for="batch_type">Select Batch:</label>
+
+        <select id="batch_type" name="batch_type">
+            <option value="">All Batches</option>
+            <option value="Fall">Fall</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+        </select>
+
+        <a href="add_batch_admin.html">
+            <input type="button" value="Add New Batch">
+        </a>
+
+        <br><br>
+
+        <table border="1" width="100%">
+
+            <tr>
+                <th>Batch ID</th>
+                <th>Batch Name</th>
+                <th>Batch Type</th>
+                <th>Level</th>
+                <th>Day</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Duration</th>
+                <th>Teacher</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>BAT-101</td>
+                <td>Web Development Batch</td>
+                <td>Fall</td>
+                <td>L-3</td>
+                <td>Saturday</td>
+                <td>08:00 AM</td>
+                <td>09:30 AM</td>
+                <td>1 Hour 30 Minutes</td>
+                <td>Mr. Rahman</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>BAT-102</td>
+                <td>Graphic Design Batch</td>
+                <td>Spring</td>
+                <td>L-3</td>
+                <td>Sunday</td>
+                <td>10:00 AM</td>
+                <td>11:30 AM</td>
+                <td>1 Hour 30 Minutes</td>
+                <td>Ms. Sultana</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>BAT-103</td>
+                <td>Digital Marketing Batch</td>
+                <td>Summer</td>
+                <td>L-3</td>
+                <td>Monday</td>
+                <td>02:00 PM</td>
+                <td>03:30 PM</td>
+                <td>1 Hour 30 Minutes</td>
+                <td>Dr. Ahmed</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>BAT-104</td>
+                <td>Programming Fundamentals Batch</td>
+                <td>Fall</td>
+                <td>L-2</td>
+                <td>Tuesday</td>
+                <td>04:00 PM</td>
+                <td>05:30 PM</td>
+                <td>1 Hour 30 Minutes</td>
+                <td>Mr. Karim</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>BAT-105</td>
+                <td>UI/UX Design Batch</td>
+                <td>Spring</td>
+                <td>L-2</td>
+                <td>Wednesday</td>
+                <td>11:00 AM</td>
+                <td>12:30 PM</td>
+                <td>1 Hour 30 Minutes</td>
+                <td>Ms. Nabila</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+            <tr>
+                <td>BAT-106</td>
+                <td>Data Science Batch</td>
+                <td>Summer</td>
+                <td>L-1</td>
+                <td>Thursday</td>
+                <td>03:00 PM</td>
+                <td>04:30 PM</td>
+                <td>1 Hour 30 Minutes</td>
+                <td>Mr. Hasan</td>
+                <td>
+                    <input type="button" value="Edit">
+                    <input type="button" value="Delete">
+                </td>
+            </tr>
+
+        </table>
+
+    </fieldset>
+
+</body>
+
+</html>

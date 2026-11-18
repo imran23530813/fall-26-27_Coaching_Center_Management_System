@@ -109,7 +109,7 @@ select#class {
 }
 
 /*student*/
-select#student_class {
+select {
     padding: 8px 12px;
     border: 1px solid #CBD5E1;
     border-radius: 8px;
@@ -118,12 +118,11 @@ select#student_class {
     background-color: #FFFFFF;
     outline: none;
     margin-right: 15px;
+    margin-bottom: 10px;
     transition: border-color 0.2s;
-
-
 }
 
-select#batch_type:focus {
+select:focus {
     border-color: #2a316b;
     box-shadow: 0 0 0 3px rgba(142, 108, 200, 0.15);
 }
@@ -221,5 +220,4 @@ button:hover,
 td input[type="button"][value="Delete"]:hover {
     background-color: #D9534F;
     color: black;
-
 }

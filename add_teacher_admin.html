@@ -5,25 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoachEase - Add New Teacher</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../../css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="../fall-26-27_Coaching_Center_Management_System/css/add_admin.css">
 </head>
 
 <body>
 
     <h1>🎓 CoachEase</h1>
-    <!-- <h2>👨‍🏫 Add New Teacher</h2> -->
-    <nav>
 
-        <a href="Dashboard.html">Dashboard</a> |
-        <a href="student_admission.html">Student Admission</a> |
-        <a href="teacher_management.html">Teacher Management</a> |
-        <a href="batch_management.html">Batch Management</a> |
-        <a href="course_management.html">Course Management</a>
+    <nav>
+        <a href="Dashboard_admin.html">Dashboard</a> |
+        <a href="student_admission_admin.html">Student Admission</a> |
+        <a href="teacher_management_admin.html">Teacher Management</a> |
+        <a href="batch_management_admin.html">Batch Management</a> |
+        <a href="course_management_admin.html">Course Management</a>
     </nav>
 
     <fieldset>
-        <legend>👨‍🏫Create Teacher Account</legend>
-
+        <legend>👨‍🏫 Create Teacher Account</legend>
 
         <form method="post">
 
@@ -64,17 +62,18 @@
                     </td>
                 </tr>
 
+                <!-- Select Course -->
                 <tr>
                     <td colspan="2">
-                        Select Class:<br>
-                        <select name="class" required>
-                            <option value="">Select Class</option>
-                            <option value="Class 6">Class 6</option>
-                            <option value="Class 7">Class 7</option>
-                            <option value="Class 8">Class 8</option>
-                            <option value="Class 9">Class 9</option>
-                            <option value="Class 10">Class 10</option>
-                            <option value="Class 11">Class 11</option>
+                        Select Course:<br>
+                        <select name="course_id" required>
+                            <option value="" selected disabled>Select Course</option>
+                            <option value="CRS-101">Web Development</option>
+                            <option value="CRS-102">Graphic Design</option>
+                            <option value="CRS-103">Digital Marketing</option>
+                            <option value="CRS-104">Programming Fundamentals</option>
+                            <option value="CRS-105">UI/UX Design</option>
+                            <option value="CRS-106">Data Science</option>
                         </select>
                     </td>
                 </tr>
@@ -107,3 +106,5 @@
     </fieldset>
 
 </body>
+
+</html>

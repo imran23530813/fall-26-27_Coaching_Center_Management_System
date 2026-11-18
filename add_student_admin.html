@@ -4,28 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-
-    <title>Student Admission Form</title>
+    <title>CoachEase - Student Admission Form</title>
+    <link rel="stylesheet" type="text/css" href="../fall-26-27_Coaching_Center_Management_System/css/add_admin.css">
 </head>
 
 <body>
 
-    <h1>🎓CoachEase</h1>
-    <!-- <h2>Student Enrolment</h2> -->
-
+    <h1>🎓 CoachEase</h1>
 
     <nav>
-        <a href="Dashboard.html">Dashboard</a>
-        <a href="student_admission.html">Student Admission</a> |
-        <a href="teacher_management.html">Teacher Management</a> |
-        <a href="batch_management.html">Batch Management</a> |
-        <a href="course_management.html">Course Management</a>
+        <a href="Dashboard_admin.html">Dashboard</a> |
+        <a href="student_admission_admin.html">Student Admission</a> |
+        <a href="teacher_management_admin.html">Teacher Management</a> |
+        <a href="batch_management_admin.html">Batch Management</a> |
+        <a href="course_management_admin.html">Course Management</a>
     </nav>
 
     <fieldset>
-        <legend>➕Add New Student</legend>
-
+        <legend>➕ Add New Student</legend>
 
         <form method="post">
 
@@ -52,18 +48,37 @@
                     </td>
                 </tr>
 
+                <!-- Select Batch -->
                 <tr>
                     <td colspan="2">
-                        Select Class:<br>
-                        <select name="class" required>
-                            <option value="">Select Class</option>
-                            <option value="Class 6">Class 6</option>
-                            <option value="Class 7">Class 7</option>
-                            <option value="Class 8">Class 8</option>
-                            <option value="Class 9">Class 9</option>
-                            <option value="Class 10">Class 10</option>
-                            <option value="Class 11">Class 11</option>
-                            <option value="Class 12">Class 12</option>
+                        Select Batch:<br>
+                        <select name="batch_id" required>
+                            <option value="" selected disabled>Select Batch</option>
+
+                            <option value="BAT-101">
+                                BAT-101 - Web Development (L-3, Fall)
+                            </option>
+
+                            <option value="BAT-102">
+                                BAT-102 - Graphic Design (L-3, Spring)
+                            </option>
+
+                            <option value="BAT-103">
+                                BAT-103 - Digital Marketing (L-3, Summer)
+                            </option>
+
+                            <option value="BAT-104">
+                                BAT-104 - Programming Fundamentals (L-2, Fall)
+                            </option>
+
+                            <option value="BAT-105">
+                                BAT-105 - UI/UX Design (L-2, Spring)
+                            </option>
+
+                            <option value="BAT-106">
+                                BAT-106 - Data Science (L-1, Summer)
+                            </option>
+
                         </select>
                     </td>
                 </tr>
@@ -91,9 +106,7 @@
 
                 <tr>
                     <td colspan="2" style="text-align: center;">
-                        <a href="student_admission.html">
-                            <input type="submit" value="Add Student">
-                        </a>
+                        <input type="submit" value="Add Student">
                         <input type="reset" value="Reset">
                     </td>
                 </tr>
@@ -105,3 +118,5 @@
     </fieldset>
 
 </body>
+
+</html>
