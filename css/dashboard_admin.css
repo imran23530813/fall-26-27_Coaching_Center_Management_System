@@ -11,14 +11,21 @@ body {
     color: #333333;
     background-color: #FBF4FF;
     padding: 20px;
+
+
 }
 
-h1 {
+
+/* Main Heading */
+
+body>h1 {
     text-align: center;
     color: #000422;
     padding: 15px 0 20px 0;
     font-size: 2rem;
 }
+
+/* Fieldset */
 
 fieldset {
     max-width: 1100px;
@@ -38,6 +45,7 @@ legend {
     margin-left: 15px;
 }
 
+/* Dashboard Table */
 
 table {
     width: 100%;
@@ -61,14 +69,21 @@ td {
     border: 1px solid #E2E8F0;
     font-size: 1rem;
     font-weight: 600;
+    transition: background-color 0.3s;
 }
 
 tr:hover {
     background-color: #F1EDF9;
 }
 
+/* Revenue Highlight */
 
+#monthly_revenue {
+    color: #27813D;
+    font-weight: bold;
+}
 
+/* Navigation */
 
 nav {
     padding: 20px 10px;
@@ -76,7 +91,6 @@ nav {
     width: 100%;
     margin: 20px auto;
 }
-
 
 nav a {
     display: inline-block;
@@ -91,7 +105,6 @@ nav a {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-
 nav a img {
     width: 150px;
     height: 150px;
@@ -101,13 +114,11 @@ nav a img {
     transition: transform 0.3s;
 }
 
-
 nav a span {
     display: block;
     font-size: 0.9rem;
     color: #1B1F3B;
 }
-
 
 nav a:hover {
     transform: scale(1.08);
@@ -115,7 +126,35 @@ nav a:hover {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.20);
 }
 
-
 nav a:hover img {
     transform: scale(1.08);
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav a {
+        width: 140px;
+        margin: 8px;
+    }
+
+    nav a img {
+        width: 110px;
+        height: 110px;
+    }
 }

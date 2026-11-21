@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CoachEase - Batch Management</title>
+
     <link rel="stylesheet" type="text/css"
         href="../fall-26-27_Coaching_Center_Management_System/css/managemnt_admin.css">
+
 </head>
 
 <body>
@@ -23,139 +26,299 @@
 
     <br><br>
 
+
+    <!-- ================================= -->
+    <!-- BATCH LIST -->
+    <!-- ================================= -->
+
     <fieldset>
+
         <legend>📑 Batch List</legend>
 
-        <!-- Select Batch Type -->
         <label for="batch_type">Select Batch:</label>
 
         <select id="batch_type" name="batch_type">
+
             <option value="">All Batches</option>
             <option value="Fall">Fall</option>
             <option value="Spring">Spring</option>
             <option value="Summer">Summer</option>
+
         </select>
 
-        <a href="add_batch_admin.html">
-            <input type="button" value="Add New Batch">
-        </a>
+
+        <input type="button" id="open_batch_popup" value="Add New Batch">
+
 
         <br><br>
 
+
+        <!-- Search -->
+
+        <input type="text" id="batch_search" placeholder="🔍Search by Batch ID, Batch Name, Course, Teacher...">
+
+
         <table border="1" width="100%">
 
-            <tr>
-                <th>Batch ID</th>
-                <th>Batch Name</th>
-                <th>Batch Type</th>
-                <th>Level</th>
-                <th>Day</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-                <th>Duration</th>
-                <th>Teacher</th>
-                <th>Action</th>
-            </tr>
+            <thead>
 
-            <tr>
-                <td>BAT-101</td>
-                <td>Web Development Batch</td>
-                <td>Fall</td>
-                <td>L-3</td>
-                <td>Saturday</td>
-                <td>08:00 AM</td>
-                <td>09:30 AM</td>
-                <td>1 Hour 30 Minutes</td>
-                <td>Mr. Rahman</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
+                <tr>
+                    <th>Batch ID</th>
+                    <th>Batch Name</th>
+                    <th>Batch Type</th>
+                    <th>Level</th>
+                    <th>Day</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Duration</th>
+                    <th>Teacher</th>
+                    <th>Action</th>
+                </tr>
 
-            <tr>
-                <td>BAT-102</td>
-                <td>Graphic Design Batch</td>
-                <td>Spring</td>
-                <td>L-3</td>
-                <td>Sunday</td>
-                <td>10:00 AM</td>
-                <td>11:30 AM</td>
-                <td>1 Hour 30 Minutes</td>
-                <td>Ms. Sultana</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
+            </thead>
 
-            <tr>
-                <td>BAT-103</td>
-                <td>Digital Marketing Batch</td>
-                <td>Summer</td>
-                <td>L-3</td>
-                <td>Monday</td>
-                <td>02:00 PM</td>
-                <td>03:30 PM</td>
-                <td>1 Hour 30 Minutes</td>
-                <td>Dr. Ahmed</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
+            <tbody id="batch_table_body">
 
-            <tr>
-                <td>BAT-104</td>
-                <td>Programming Fundamentals Batch</td>
-                <td>Fall</td>
-                <td>L-2</td>
-                <td>Tuesday</td>
-                <td>04:00 PM</td>
-                <td>05:30 PM</td>
-                <td>1 Hour 30 Minutes</td>
-                <td>Mr. Karim</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
-
-            <tr>
-                <td>BAT-105</td>
-                <td>UI/UX Design Batch</td>
-                <td>Spring</td>
-                <td>L-2</td>
-                <td>Wednesday</td>
-                <td>11:00 AM</td>
-                <td>12:30 PM</td>
-                <td>1 Hour 30 Minutes</td>
-                <td>Ms. Nabila</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
-
-            <tr>
-                <td>BAT-106</td>
-                <td>Data Science Batch</td>
-                <td>Summer</td>
-                <td>L-1</td>
-                <td>Thursday</td>
-                <td>03:00 PM</td>
-                <td>04:30 PM</td>
-                <td>1 Hour 30 Minutes</td>
-                <td>Mr. Hasan</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
+            </tbody>
 
         </table>
 
     </fieldset>
+
+
+
+    <div id="batch_popup" class="modal">
+
+        <div class="modal_content">
+
+            <span id="close_batch_popup" class="close_popup">
+                &times;
+            </span>
+
+
+            <fieldset class="popup_fieldset">
+
+                <legend id="batch_popup_title">
+                    ➕ Create Batch
+                </legend>
+
+
+                <form id="batch_form">
+
+
+                    <!-- Batch Type -->
+
+                    <label for="batch_type_form">
+                        Select Batch Type:
+                    </label>
+
+                    <select id="batch_type_form" name="batch_type" required>
+
+                        <option value="" selected disabled>
+                            Select Batch Type
+                        </option>
+
+                        <option value="Fall">Fall</option>
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+
+                    </select>
+
+
+                    <br><br>
+
+
+                    <!-- Dynamic Course Dropdown -->
+
+                    <label for="course_id">
+                        Select Batch Name:
+                    </label>
+
+                    <select id="course_id" name="course_id" required>
+
+                        <option value="" selected disabled>
+                            Select Batch Name
+                        </option>
+
+                    </select>
+
+
+                    <br><br>
+
+
+                    <!-- Level -->
+
+                    <label for="level">
+                        Select Level:
+                    </label>
+
+                    <select id="level" name="level" required>
+
+                        <option value="" selected disabled>
+                            Select Level
+                        </option>
+
+                        <option value="L-1">L-1</option>
+                        <option value="L-2">L-2</option>
+                        <option value="L-3">L-3</option>
+
+                    </select>
+
+
+                    <br><br>
+
+
+                    <!-- Day -->
+
+                    <label for="batch_day">
+                        Select Day:
+                    </label>
+
+                    <select id="batch_day" name="batch_day" required>
+
+                        <option value="" selected disabled>
+                            Select Day
+                        </option>
+
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+
+                    </select>
+
+
+                    <br><br>
+
+
+                    <!-- Start Time -->
+
+                    <label for="start_time">
+                        Start Time:
+                    </label>
+
+                    <select id="start_time" name="start_time" required>
+
+                        <option value="" selected disabled>
+                            Select Start Time
+                        </option>
+
+                        <option value="08:00 AM">08:00 AM</option>
+                        <option value="08:30 AM">08:30 AM</option>
+                        <option value="09:00 AM">09:00 AM</option>
+                        <option value="09:30 AM">09:30 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="10:30 AM">10:30 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="11:30 AM">11:30 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="12:30 PM">12:30 PM</option>
+                        <option value="01:00 PM">01:00 PM</option>
+                        <option value="01:30 PM">01:30 PM</option>
+                        <option value="02:00 PM">02:00 PM</option>
+                        <option value="02:30 PM">02:30 PM</option>
+                        <option value="03:00 PM">03:00 PM</option>
+                        <option value="03:30 PM">03:30 PM</option>
+                        <option value="04:00 PM">04:00 PM</option>
+                        <option value="04:30 PM">04:30 PM</option>
+                        <option value="05:00 PM">05:00 PM</option>
+
+                    </select>
+
+
+                    <br><br>
+
+
+                    <!-- End Time -->
+
+                    <label for="end_time">
+                        End Time:
+                    </label>
+
+                    <select id="end_time" name="end_time" required>
+
+                        <option value="" selected disabled>
+                            Select End Time
+                        </option>
+
+                        <option value="08:30 AM">08:30 AM</option>
+                        <option value="09:00 AM">09:00 AM</option>
+                        <option value="09:30 AM">09:30 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="10:30 AM">10:30 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="11:30 AM">11:30 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="12:30 PM">12:30 PM</option>
+                        <option value="01:00 PM">01:00 PM</option>
+                        <option value="01:30 PM">01:30 PM</option>
+                        <option value="02:00 PM">02:00 PM</option>
+                        <option value="02:30 PM">02:30 PM</option>
+                        <option value="03:00 PM">03:00 PM</option>
+                        <option value="03:30 PM">03:30 PM</option>
+                        <option value="04:00 PM">04:00 PM</option>
+                        <option value="04:30 PM">04:30 PM</option>
+                        <option value="05:00 PM">05:00 PM</option>
+                        <option value="05:30 PM">05:30 PM</option>
+
+                    </select>
+
+
+                    <br><br>
+
+
+                    <!-- Assigned Teacher -->
+
+                    <label for="teacher">
+                        Assigned Teacher:
+                    </label>
+
+                    <select id="teacher" name="teacher" required>
+
+                        <option value="" selected disabled>
+                            Select Teacher
+                        </option>
+
+                        <option value="Mr. Rahman">Mr. Rahman</option>
+                        <option value="Ms. Sultana">Ms. Sultana</option>
+                        <option value="Dr. Ahmed">Dr. Ahmed</option>
+                        <option value="Mr. Karim">Mr. Karim</option>
+                        <option value="Ms. Nabila">Ms. Nabila</option>
+                        <option value="Mr. Hasan">Mr. Hasan</option>
+
+                    </select>
+
+
+                    <br><br>
+
+
+
+
+                    <div class="form_buttons">
+
+                        <input type="submit" id="batch_submit" value="Create Batch">
+
+                        <input type="reset" value="Reset">
+
+                    </div>
+
+
+                </form>
+
+            </fieldset>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="../fall-26-27_Coaching_Center_Management_System/js/batch_management.js">
+    </script>
 
 </body>
 

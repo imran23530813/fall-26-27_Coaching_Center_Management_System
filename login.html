@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CoachEase - Login</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-box">
+
+            <h1>🎓CoachEase</h1>
+
+            <p class="subtitle">
+                Coaching Center Management System
+            </p>
+
+            <h2>Login to Your Account</h2>
+
+
+            <form id="loginForm">
+
+                <label for="role">Login As</label>
+
+                <select id="role" required>
+
+                    <option value="">Select Your Role</option>
+
+                    <option value="Admin">Admin</option>
+
+                    <option value="Student">Student</option>
+
+                    <option value="Teacher">Teacher</option>
+
+                    <option value="Accountant">Accountant</option>
+
+                </select>
+
+
+                <label for="username">Username</label>
+
+                <input type="text" id="username" placeholder="Enter your username" required>
+
+
+                <label for="password">Password</label>
+
+                <input type="password" id="password" placeholder="Enter your password" required>
+
+
+                <button type="submit">
+                    Login
+                </button>
+
+
+                <p id="loginMessage" class="message"></p>
+
+            </form>
+
+
+            <p class="bottom-text">
+
+                Don't have an account?
+
+                <a href="registration.html">
+                    Register Here
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CoachEase - Course Management</title>
+
     <link rel="stylesheet" type="text/css"
         href="../fall-26-27_Coaching_Center_Management_System/css/managemnt_admin.css">
 </head>
@@ -24,10 +26,13 @@
     <br><br>
 
     <!-- Available Levels -->
+
     <fieldset>
+
         <legend>✨ Available Levels</legend>
 
         <table border="1" width="100%">
+
             <tr>
                 <th>Level</th>
                 <th>Level Information</th>
@@ -47,6 +52,7 @@
                 <td>L-3</td>
                 <td>Advanced Level</td>
             </tr>
+
         </table>
 
     </fieldset>
@@ -54,106 +60,107 @@
     <br>
 
     <!-- Course List -->
+
     <fieldset>
+
         <legend>📋 Course List and ➕ Add Course</legend>
 
-        <a href="add_course_admin.html">
-            <input type="button" value="Add New Course">
-        </a>
+        <input type="button" id="open_course_popup" value="Add New Course">
+
+        <br><br>
+
+
+        <input type="text" id="course_search" placeholder="🔍 Search by Course ID, Name, Description or Fee...">
 
         <br><br>
 
         <table border="1" width="100%">
 
-            <tr>
-                <th>Course ID</th>
-                <th>Course Name</th>
-                <th>Description</th>
-                <th>Monthly Fee (BDT)</th>
-                <th>Action</th>
-            </tr>
+            <thead>
 
-            <tr>
-                <td>CRS-101</td>
-                <td>Web Development</td>
-                <td title="Learn HTML, CSS, JavaScript and website development">
-                    Web Development Course
-                </td>
-                <td>2000</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Monthly Fee (BDT)</th>
+                    <th>Action</th>
+                </tr>
 
-            <tr>
-                <td>CRS-102</td>
-                <td>Graphic Design</td>
-                <td title="Learn graphic design, typography and visual communication">
-                    Graphic Design Course
-                </td>
-                <td>1800</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
+            </thead>
 
-            <tr>
-                <td>CRS-103</td>
-                <td>Digital Marketing</td>
-                <td title="Learn SEO, digital advertising and social media marketing">
-                    Digital Marketing Course
-                </td>
-                <td>1500</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
+            <tbody id="course_table_body">
 
-            <tr>
-                <td>CRS-104</td>
-                <td>Programming Fundamentals</td>
-                <td title="Learn programming basics, logic and problem solving">
-                    Programming Fundamentals Course
-                </td>
-                <td>2000</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
-
-            <tr>
-                <td>CRS-105</td>
-                <td>UI/UX Design</td>
-                <td title="Learn user interface and user experience design">
-                    UI/UX Design Course
-                </td>
-                <td>2200</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
-
-            <tr>
-                <td>CRS-106</td>
-                <td>Data Science</td>
-                <td title="Learn data analysis, statistics and machine learning basics">
-                    Data Science Course
-                </td>
-                <td>2500</td>
-                <td>
-                    <input type="button" value="Edit">
-                    <input type="button" value="Delete">
-                </td>
-            </tr>
+            </tbody>
 
         </table>
 
     </fieldset>
+
+
+
+
+    <div id="course_popup" class="modal">
+
+        <div class="modal_content">
+
+            <span id="close_course_popup" class="close_popup">&times;</span>
+
+            <fieldset class="popup_fieldset">
+
+                <legend id="course_popup_title">➕ Add Course Information</legend>
+
+                <form id="course_form">
+
+                    <!-- Course Name -->
+
+                    <label for="cname">Course Name:</label>
+
+                    <input type="text" id="cname" name="cname" placeholder="Enter course name" required>
+
+                    <br><br>
+
+
+
+
+                    <label for="cdesc">Course Description:</label>
+
+                    <textarea id="cdesc" name="cdesc" placeholder="Write course description" rows="4"
+                        required></textarea>
+
+                    <br><br>
+
+
+
+
+                    <label for="cfee">Monthly Course Fee (BDT):</label>
+
+                    <input type="number" id="cfee" name="cfee" placeholder="Enter monthly fee" min="1" required>
+
+                    <br><br>
+
+
+
+
+                    <div class="form_buttons">
+
+                        <input type="submit" id="course_submit" value="Add Course">
+
+                        <input type="reset" value="Reset">
+
+                    </div>
+
+                </form>
+
+            </fieldset>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="../fall-26-27_Coaching_Center_Management_System/js/course_management.js"></script>
 
 </body>
 

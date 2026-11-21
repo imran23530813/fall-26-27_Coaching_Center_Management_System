@@ -9,9 +9,7 @@ body {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     font-size: 15px;
     line-height: 1.6;
-    /*   15px*1.6    */
     color: #333333;
-
 }
 
 h1 {
@@ -19,6 +17,11 @@ h1 {
     color: #000422;
     padding: 15px 0 5px 0;
 }
+
+
+/* ================================= */
+/* NAVIGATION                        */
+/* ================================= */
 
 nav {
     position: sticky;
@@ -33,7 +36,7 @@ nav {
 }
 
 nav a {
-    text-decoration: 0;
+    text-decoration: none;
     color: #A0A5C0;
     font-weight: bold;
     padding: 8px 16px;
@@ -41,12 +44,18 @@ nav a {
     display: inline-block;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
+    position: relative;
 }
 
 nav a:hover {
     background-color: #2E345D;
     color: #479d56;
 }
+
+
+/* ================================= */
+/* FIELDSET                          */
+/* ================================= */
 
 fieldset {
     max-width: 1100px;
@@ -57,7 +66,6 @@ fieldset {
     padding: 24px;
     position: relative;
     border-radius: 24px;
-
 }
 
 legend {
@@ -78,7 +86,11 @@ label {
     margin-right: 10px;
 }
 
-/* for Batch*/
+
+/* ================================= */
+/* BATCH SELECT                      */
+/* ================================= */
+
 select#batch_type {
     padding: 8px 12px;
     border: 1px solid #CBD5E1;
@@ -89,11 +101,13 @@ select#batch_type {
     outline: none;
     margin-right: 15px;
     transition: border-color 0.2s;
-
-
 }
 
-/* for teacher*/
+
+/* ================================= */
+/* TEACHER SELECT                    */
+/* ================================= */
+
 select#class {
     padding: 8px 12px;
     border: 1px solid #CBD5E1;
@@ -104,11 +118,13 @@ select#class {
     outline: none;
     margin-right: 15px;
     transition: border-color 0.2s;
-
-
 }
 
-/*student*/
+
+/* ================================= */
+/* GENERAL SELECT                    */
+/* ================================= */
+
 select {
     padding: 8px 12px;
     border: 1px solid #CBD5E1;
@@ -122,10 +138,10 @@ select {
     transition: border-color 0.2s;
 }
 
-select:focus {
-    border-color: #2a316b;
-    box-shadow: 0 0 0 3px rgba(142, 108, 200, 0.15);
-}
+
+/* ================================= */
+/* TABLE                             */
+/* ================================= */
 
 table {
     width: 100%;
@@ -134,7 +150,6 @@ table {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-
 }
 
 th,
@@ -142,7 +157,6 @@ td {
     padding: 12px 10px;
     text-align: center;
     font-size: 0.88rem;
-
 }
 
 th {
@@ -152,14 +166,11 @@ th {
     border: none;
 }
 
-tr:hover {
-    background-color: #F1EDF9;
-}
 
-td {
-    border-bottom: 1px solid #E2E8F0;
-    color: #333333
-}
+
+/* ================================= */
+/* GENERAL BUTTON                    */
+/* ================================= */
 
 input[type="button"] {
     background-color: #1B1F3B;
@@ -172,28 +183,7 @@ input[type="button"] {
     font-size: 0.85rem;
     cursor: pointer;
     transition: background-color 0.3s;
-
 }
-
-
-
-/* student add buttoon*/
-
-/* input[type="submit"] {
-    background-color: #1B1F3B;
-    color: #FBF4FF;
-    border: none;
-    padding: 6px 14px;
-    text-align: center;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-} */
-
-
 
 input[type="button"]:hover {
     background-color: #479d56;
@@ -202,12 +192,185 @@ input[type="button"]:hover {
 }
 
 
-button:hover,
-input[type="button"][value="Edit"]:hover {
-    background-color: #AA8239;
+/* ================================= */
+/* STUDENT ADMISSION BUTTON          */
+/* ================================= */
+
+#open_student_popup {
+    background-color: #1B1F3B;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#open_student_popup:hover {
+    background-color: #479d56;
     color: black;
+}
+
+
+/* ================================= */
+/* POPUP DESIGN                      */
+/* ================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    overflow-y: auto;
+    padding: 30px 15px;
+}
+
+
+/* Popup Form Box */
+
+.modal_content {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 520px;
+    margin: 20px auto;
+    padding: 25px;
+    border: 1px solid #2a316b;
+    border-radius: 16px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.30);
+    position: relative;
+}
+
+.modal_content h2 {
+    text-align: center;
+    color: #1B1F3B;
+    margin-bottom: 15px;
+}
+
+
+/* Close Button */
+
+.close_popup {
+    position: absolute;
+    right: 18px;
+    top: 8px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #555555;
     cursor: pointer;
 }
+
+.close_popup:hover {
+    color: #D9534F;
+}
+
+
+/* Popup Form */
+
+.modal_content form {
+    padding: 0;
+}
+
+
+/* Popup Fieldset */
+
+.modal_content .popup_fieldset {
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 16px;
+}
+
+.modal_content .popup_fieldset legend {
+    margin-left: 15px;
+    padding: 0 10px;
+}
+
+.modal_content table {
+    margin-top: 0;
+}
+
+.modal_content table tr:hover {
+    background-color: transparent;
+}
+
+.modal_content table td {
+    padding: 7px 0;
+    text-align: left;
+    border-bottom: none;
+}
+
+
+/* Popup Input Fields */
+
+.modal_content input[type="text"],
+.modal_content input[type="email"],
+.modal_content input[type="tel"],
+.modal_content input[type="date"],
+.modal_content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+
+/* ================================= */
+/* GREEN FOCUS EFFECT                */
+/* ================================= */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid #479d56 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(71, 157, 86, 0.15) !important;
+}
+
+
+/* Submit and Reset Buttons */
+
+.modal_content input[type="submit"],
+.modal_content input[type="reset"] {
+    width: 48%;
+    padding: 10px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1B1F3B;
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.modal_content input[type="submit"]:hover {
+    background-color: #479d56;
+    color: black;
+}
+
+.modal_content input[type="reset"]:hover {
+    background-color: #D9534F;
+    color: white;
+}
+
+.form_buttons {
+    text-align: center !important;
+}
+
+
+/* ================================= */
+/* EDIT AND DELETE BUTTON            */
+/* ================================= */
 
 td input[type="button"] {
     padding: 5px 10px;
@@ -217,7 +380,169 @@ td input[type="button"] {
 }
 
 button:hover,
+input[type="button"][value="Edit"]:hover {
+    background-color: #AA8239;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover,
 td input[type="button"][value="Delete"]:hover {
     background-color: #D9534F;
     color: black;
+}
+
+
+/* ================================= */
+/* STUDENT SEARCH BAR                */
+/* ================================= */
+
+#student_search {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#student_search:focus {
+    border: 1px solid #479d56;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(71, 157, 86, 0.15);
+}
+
+
+/* ================================= */
+/* TEACHER SEARCH BAR                */
+/* ================================= */
+
+#teacher_search {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#teacher_search:focus {
+    border-color: #28a745;
+}
+
+
+/* Teacher Password Field */
+
+#teacher_popup input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#teacher_popup input[type="password"]:focus {
+    border-color: #28a745;
+}
+
+
+/* ================================= */
+/* BATCH MANAGEMENT SEARCH           */
+/* ================================= */
+
+#batch_search {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#batch_search:focus {
+    border-color: #28a745;
+}
+
+
+/* ================================= */
+/* COURSE MANAGEMENT SEARCH          */
+/* ================================= */
+
+#course_search {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#course_search:focus {
+    border-color: #28a745;
+}
+
+
+/* Course Popup Form */
+
+#course_popup form input,
+#course_popup form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+#course_popup form input:focus,
+#course_popup form textarea:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+
+/* ================================= */
+/* SMALL SCREEN SUPPORT              */
+/* ================================= */
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        width: 95%;
+    }
+
+    nav a {
+        padding: 6px 8px;
+        margin: 2px;
+    }
+
+    .modal_content {
+        padding: 20px 15px;
+    }
+
+    fieldset {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #student_search {
+        max-width: 100%;
+    }
 }

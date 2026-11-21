@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>CoachEase - Admin Dashboard</title>
+
     <link rel="stylesheet" href="../fall-26-27_Coaching_Center_Management_System/css/dashboard_admin.css">
 </head>
 
 <body>
+
+
 
     <h1>🎓 CoachEase</h1>
 
@@ -16,21 +20,23 @@
         <legend>Dashboard Overview</legend>
 
         <table border="1">
+
             <tr>
                 <th>Total Students</th>
                 <th>Total Teachers</th>
                 <th>Active Batches</th>
                 <th>Total Courses</th>
-                <th>Monthly Revenue</th>
+                <th>Expected Monthly Revenue</th>
             </tr>
 
             <tr>
-                <td>250</td>
-                <td>15</td>
-                <td>12</td>
-                <td>6</td>
-                <td>৳ 1,50,000</td>
+                <td id="total_students">0</td>
+                <td id="total_teachers">0</td>
+                <td id="total_batches">0</td>
+                <td id="total_courses">0</td>
+                <td id="monthly_revenue">৳ 0</td>
             </tr>
+
         </table>
 
     </fieldset>
@@ -75,6 +81,8 @@
         </nav>
 
     </fieldset>
+
+    <script src="../fall-26-27_Coaching_Center_Management_System/js/dashboard_admin.js"></script>
 
 </body>
 
