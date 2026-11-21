@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Dashboard | CoachEase</title>
+
+    <link rel="stylesheet" href="css/teacher.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>CoachEase</h1>
+
+        <p>Teacher Panel</p>
+
+    </header>
+    <nav>
+
+        <a href="teacher-dashboard.html">Dashboard</a> |
+
+        <a href="teacher-exams.html">Exams</a> |
+
+        <a href="teacher-results.html">Results</a> |
+
+        <a href="teacher-assignments.html">Assignments</a>
+
+    </nav>
+
+    <!-- TEACHER DASHBOARD -->
+
+    <main class="teacher-dashboard">
+
+        <marquee>
+
+            <h4>
+                🎓 Welcome to the Teacher Portal, track your students’ progress here
+            </h4>
+
+        </marquee>
+
+
+        <h2>Teacher Dashboard</h2>
+
+
+        <!-- WELCOME -->
+
+        <div class="teacher-dashboard-top">
+
+            <p id="teacherWelcome">
+                Welcome, Teacher!
+            </p>
+
+            <button type="button" id="teacherLogoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+
+        <!-- TEACHER PROFILE -->
+
+        <section class="teacher-profile">
+
+            <h3>My Profile</h3>
+
+
+            <p>
+
+                <strong>Teacher ID:</strong>
+
+                <span id="profileTeacherID">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Name:</strong>
+
+                <span id="profileTeacherName">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Username:</strong>
+
+                <span id="profileTeacherUsername">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Mobile:</strong>
+
+                <span id="profileTeacherMobile">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Email:</strong>
+
+                <span id="profileTeacherEmail">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Expertise:</strong>
+
+                <span id="profileTeacherExpertise">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Level:</strong>
+
+                <span id="profileTeacherLevel">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Course:</strong>
+
+                <span id="profileTeacherCourse">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Qualification:</strong>
+
+                <span id="profileTeacherQualification">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>Status:</strong>
+
+                <span id="profileTeacherStatus">
+                    Not Available
+                </span>
+
+            </p>
+
+
+            <p id="teacherProfileMessage"></p>
+
+        </section>
+
+
+        <!-- TEACHER MODULES -->
+
+        <p>
+            Select a module to manage your teaching work.
+        </p>
+
+
+        <div class="teacher-grid">
+
+
+            <!-- EXAM MANAGEMENT -->
+
+            <section class="teacher-card">
+
+                <h3>Exam Management</h3>
+
+                <p>
+                    Exam schedules, dates and total marks.
+                </p>
+
+                <a href="teacher-exams.html">
+                    Open Exams
+                </a>
+
+            </section>
+
+
+            <!-- RESULT MANAGEMENT -->
+
+            <section class="teacher-card">
+
+                <h3>Result Management</h3>
+
+                <p>
+                    Marks, grades and published results.
+                </p>
+
+                <a href="teacher-results.html">
+                    Open Results
+                </a>
+
+            </section>
+
+
+            <!-- ASSIGNMENT MANAGEMENT -->
+
+            <section class="teacher-card">
+
+                <h3>Assignment Management</h3>
+
+                <p>
+                    Assignments, deadlines and feedback.
+                </p>
+
+                <a href="teacher-assignments.html">
+                    Open Assignments
+                </a>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/teacher.js"></script>
+
+</body>
+
+</html>

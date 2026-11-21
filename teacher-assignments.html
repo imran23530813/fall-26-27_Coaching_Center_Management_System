@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Assignments | CoachEase</title>
+
+    <link rel="stylesheet" href="css/teacher.css">
+
+</head>
+
+<body>
+
+    <header class="teacher-page-header">
+
+        <h1>CoachEase</h1>
+
+        <p>Teacher Panel — Assignment Management</p>
+
+    </header>
+
+    <nav class="teacher-nav">
+
+        <a href="teacher-dashboard.html">Dashboard</a>
+
+        <a href="teacher-exams.html">Exams</a>
+
+        <a href="teacher-results.html">Results</a>
+
+        <a href="teacher-assignments.html">Assignments</a>
+
+    </nav>
+
+    <main class="assignment-container">
+
+        <marquee>
+            <h4>
+                🎓 Welcome to the Teacher Portal, track your students’ progress here
+            </h4>
+        </marquee>
+
+        <h2>Create Assignment</h2>
+
+
+        <form id="assignmentForm" class="assignment-form">
+
+
+            <!-- ASSIGNMENT TITLE -->
+
+            <label for="assignmentTitle">
+                Assignment Title
+            </label>
+
+            <input type="text" id="assignmentTitle" name="assignmentTitle" placeholder="Enter Assignment Title"
+                required>
+
+
+            <!-- COURSE -->
+
+            <label for="assignmentCourse">
+                Course
+            </label>
+
+            <select id="assignmentCourse" name="assignmentCourse" required>
+
+                <option value="">Select Course</option>
+
+                <option value="wd-l3">
+                    Web Development L3
+                </option>
+
+                <option value="dm-l3">
+                    Digital Marketing L3
+                </option>
+
+                <option value="gd-l3">
+                    Graphic Design L3
+                </option>
+
+            </select>
+
+
+            <!-- INSTRUCTIONS -->
+
+            <label for="assignmentDescription">
+                Instructions
+            </label>
+
+            <textarea id="assignmentDescription" name="assignmentDescription" rows="4"
+                placeholder="Enter assignment instructions" required></textarea>
+
+
+            <!-- DEADLINE -->
+
+            <label for="assignmentDeadline">
+                Submission Deadline
+            </label>
+
+            <input type="date" id="assignmentDeadline" name="assignmentDeadline" required>
+
+
+            <!-- CREATE BUTTON -->
+
+            <button type="submit">
+                Create Assignment
+            </button>
+
+
+            <!-- MESSAGE -->
+
+            <p id="assignmentMessage"></p>
+
+        </form>
+
+
+        <!-- ASSIGNMENT LIST -->
+
+        <h2>Assignment List</h2>
+
+
+        <div class="assignment-table-wrap">
+
+            <table class="assignment-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>SL</th>
+
+                        <th>Title</th>
+
+                        <th>Course</th>
+
+                        <th>Deadline</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+                <!-- JAVASCRIPT DISPLAYS ASSIGNMENTS HERE -->
+
+                <tbody id="assignmentTableBody"></tbody>
+
+            </table>
+
+        </div>
+        <!-- STUDENT SUBMISSIONS -->
+
+        <h2>Student Submissions (Sample)</h2>
+        <div class="assignment-table-wrap">
+
+            <table class="assignment-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Student</th>
+
+                        <th>Assignment</th>
+
+                        <th>Submitted</th>
+
+                        <th>Feedback</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>Humaira Kabir Era</td>
+
+                        <td>Build a Simple Web Page</td>
+
+                        <td>Yes (Sample)</td>
+
+                        <td>Pending Review</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>Fariha Mahjabin Roza</td>
+
+                        <td>Build a Simple Web Page</td>
+
+                        <td>Yes (Sample)</td>
+
+                        <td>Pending Review</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- TEACHER JAVASCRIPT -->
+
+    <script src="js/teacher.js"></script>
+
+</body>
+
+</html>

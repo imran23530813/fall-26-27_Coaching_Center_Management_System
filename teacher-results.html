@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Result Management | CoachEase</title>
+
+    <link rel="stylesheet" href="css/teacher.css">
+</head>
+
+<body>
+
+    <header class="result-header">
+        <h1>CoachEase</h1>
+        <p>Teacher Panel - Result Management</p>
+    </header>
+
+    <nav class="teacher-nav">
+        <a href="teacher-dashboard.html">Dashboard</a> |
+        <a href="teacher-exams.html">Exams</a> |
+        <a href="teacher-results.html">Results</a> |
+        <a href="teacher-assignments.html">Assignments</a>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="result-container">
+
+        <marquee behavior="scroll" direction="left">
+            <h4>
+                🎓 Welcome to the Teacher Portal, track your students’ progress here
+            </h4>
+        </marquee>
+
+
+        <h2>Result Management</h2>
+
+        <p>Select an exam and manage your students' results.</p>
+
+
+        <!-- RESULT ENTRY SECTION -->
+
+        <section class="teacher-results">
+
+            <h2>My Exam Results</h2>
+
+            <form id="resultForm">
+
+                <label for="resultExam">Select Exam</label>
+
+                <select id="resultExam" required>
+                    <option value="">-- Select Exam --</option>
+                </select>
+
+
+                <!-- STUDENT RESULT TABLE -->
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>SL</th>
+                            <th>Student</th>
+                            <th>Email</th>
+                            <th>Marks Obtained</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="resultTableBody">
+                        <!-- JavaScript will load student results here -->
+                    </tbody>
+
+                </table>
+
+
+                <button type="submit">
+                    Save Results
+                </button>
+
+                <p id="resultMessage"></p>
+
+            </form>
+
+        </section>
+
+
+        <!-- STUDENT RESULT SUMMARY SECTION -->
+
+        <section class="teacher-results">
+
+            <h2>Student Result Summary</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>SL</th>
+                        <th>Student</th>
+                        <th>Email</th>
+                        <th>Exams</th>
+                        <th>Total</th>
+                        <th>Obtained</th>
+                        <th>Percentage</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+
+                <tbody id="resultSummaryBody">
+                    <!-- JavaScript will load result summary here -->
+                </tbody>
+
+            </table>
+
+            <p id="resultSummaryMessage"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- TEACHER JAVASCRIPT -->
+
+    <script src="js/teacher.js"></script>
+
+</body>
+
+</html>

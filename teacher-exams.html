@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam Management | CoachEase</title>
+
+    <link rel="stylesheet" href="css/teacher.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>CoachEase</h1>
+
+        <marquee>
+            <h4>
+                🎓 Welcome to the Teacher Portal, track your students’ progress here
+            </h4>
+        </marquee>
+
+        <p>Teacher Panel - Exam Management</p>
+
+    </header>
+
+    <nav>
+
+        <a href="teacher-dashboard.html">Dashboard</a> |
+
+        <a href="teacher-exams.html">Exams</a> |
+
+        <a href="teacher-results.html">Results</a> |
+
+        <a href="teacher-assignments.html">Assignments</a>
+
+    </nav>
+
+
+    <!-- EXAM FORM -->
+
+    <main class="exam-page">
+
+        <h2>Create Exam Schedule</h2>
+
+        <p>Enter exam information below.</p>
+
+
+        <form id="examForm">
+
+            <div class="exam-fields">
+
+                <!-- EXAM NAME -->
+
+                <div>
+
+                    <label for="examName">Exam Name</label>
+
+                    <input type="text" id="examName" name="examName" placeholder="Monthly Test" required>
+
+                </div>
+
+
+                <!-- COURSE -->
+
+                <div>
+
+                    <label for="examCourse">Course</label>
+
+                    <select id="examCourse" name="course" required>
+
+                        <option value="">Select Course</option>
+
+                        <option value="wd-l3">
+                            Web Development L3
+                        </option>
+
+                        <option value="gd-l3">
+                            Graphic Design L3
+                        </option>
+
+                        <option value="dm-l3">
+                            Digital Marketing L3
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SUBJECT -->
+
+                <div>
+
+                    <label for="examSubject">
+                        Subject / Topic
+                    </label>
+
+                    <input type="text" id="examSubject" name="subject" placeholder="HTML Basics" required>
+
+                </div>
+
+
+                <!-- EXAM DATE -->
+
+                <div>
+
+                    <label for="examDate">Exam Date</label>
+
+                    <input type="date" id="examDate" name="date" required>
+
+                </div>
+
+
+                <!-- EXAM TIME -->
+
+                <div>
+
+                    <label for="examTime">Exam Time</label>
+
+                    <input type="time" id="examTime" name="time" required>
+
+                </div>
+
+
+                <!-- TOTAL MARKS -->
+
+                <div>
+
+                    <label for="totalMarks">Total Marks</label>
+
+                    <input type="number" id="totalMarks" name="marks" min="1" max="1000" placeholder="100" required>
+
+                </div>
+
+            </div>
+
+
+            <!-- SAVE EXAM BUTTON -->
+
+            <button type="submit">
+                Save Exam
+            </button>
+
+
+            <!-- MESSAGE -->
+
+            <p id="examMessage"></p>
+
+        </form>
+
+    </main>
+
+
+    <!-- EXAM SCHEDULE TABLE -->
+
+    <section class="exam-page">
+
+        <h2>Exam Schedule</h2>
+
+
+        <div class="exam-table-wrap">
+
+            <table class="exam-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Exam</th>
+
+                        <th>Course</th>
+
+                        <th>Subject</th>
+
+                        <th>Date</th>
+
+                        <th>Time</th>
+
+                        <th>Marks</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <!-- JAVASCRIPT WILL DISPLAY EXAMS HERE -->
+
+                <tbody id="examTableBody"></tbody>
+
+            </table>
+
+        </div>
+
+
+        <p class="exam-note">
+            Your created exam schedules will appear here.
+        </p>
+
+    </section>
+
+
+    <!-- TEACHER JAVASCRIPT -->
+
+    <script src="js/teacher.js"></script>
+
+</body>
+
+</html>
