@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #FBF4FF;
+}
+
+h1 {
+    text-align: center;
+    color: #000422;
+    padding: 15px 0 5px 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #1B1F3B;
+    padding: 12px 0;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+    color: #A0A5C0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 0 4px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #2E345D;
+    color: #479D56;
+}
+
+fieldset {
+    max-width: 515px;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid #2a316b;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    padding: 20px 24px;
+    position: relative;
+}
+
+fieldset.wide {
+    max-width: 1000px;
+    overflow-x: auto;
+}
+
+legend {
+    background-color: transparent;
+    color: #2a316b;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0 10px;
+    margin-left: 15px;
+    display: block;
+}
+
+form {
+    padding: 0 24px 24px 24px;
+    clear: both;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    vertical-align: top;
+}
+
+td a {
+    color: #2a316b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+td a:hover {
+    color: #479D56;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.75rem;
+    background-color: #FFFFFF;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2a316b;
+    box-shadow: 0 0 0 3px rgba(142, 108, 200, 0.15);
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background-color: #1B1F3B;
+    color: #FBF4FF;
+    border-color: black;
+    width: 48%;
+    padding: 10px 0;
+    margin: 10px 5px 0 0;
+    text-align: center;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #479D56;
+    color: white;
+}
+
+button:hover,
+input[type="reset"]:hover {
+    background-color: #D9534F;
+    color: white;
+}
+
+fieldset.wide table {
+    margin-top: 10px;
+    min-width: 600px;
+}
+
+fieldset.wide th,
+fieldset.wide td {
+    padding: 10px;
+    border: 1px solid #CBD5E1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+fieldset.wide th {
+    background-color: #1B1F3B;
+    color: #FBF4FF;
+}
+
+fieldset.wide tr:nth-child(even) {
+    background-color: #FBF4FF;
+}

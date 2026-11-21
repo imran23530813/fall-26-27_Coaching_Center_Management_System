@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Study Planner</title>
+    <link rel="stylesheet" type="text/css" href="css/Student.css">
+</head>
+
+<body>
+
+    <h1>🎓 CoachEase</h1>
+
+    <nav>
+        <a href="Student_Dashboard.html">Dashboard</a> |
+        <a href="Student_Assignment_Submission.html">Assignment Submission</a> |
+        <a href="Student_Study_Planner.html">Study Planner</a> |
+        <a href="Student_Feedback.html">Student Feedback</a>
+    </nav>
+
+    <br><br>
+
+    <!-- 2. Study Planner Management -->
+    <fieldset>
+        <legend>📅 Add Study Plan</legend>
+
+        <form method="post" id="plannerForm">
+
+            <table>
+
+                <!-- Study Topic -->
+                <tr>
+                    <td>
+                        <label for="plan-topic">Study Topic:</label><br>
+                        <input type="text" id="plan-topic" name="plan-topic" placeholder="Enter study topic" required>
+                    </td>
+                </tr>
+
+                <!-- Course / Subject -->
+                <tr>
+                    <td>
+                        <label for="plan-subject">Course / Subject:</label><br>
+                        <select id="plan-subject" name="plan-subject" required>
+                            <option value="" selected disabled>Select Subject</option>
+                            <option value="Physics Paper 2">Physics Paper 2</option>
+                            <option value="Higher Math">Higher Math</option>
+                            <option value="Chemistry">Chemistry</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Study Date -->
+                <tr>
+                    <td>
+                        <label for="plan-date">Study Date:</label><br>
+                        <input type="date" id="plan-date" name="plan-date" required>
+                    </td>
+                </tr>
+
+                <!-- Start Time -->
+                <tr>
+                    <td>
+                        <label for="plan-start">Start Time:</label><br>
+                        <input type="time" id="plan-start" name="plan-start" required>
+                    </td>
+                </tr>
+
+                <!-- End Time -->
+                <tr>
+                    <td>
+                        <label for="plan-end">End Time:</label><br>
+                        <input type="time" id="plan-end" name="plan-end" required>
+                    </td>
+                </tr>
+
+                <!-- Priority -->
+                <tr>
+                    <td>
+                        <label for="plan-priority">Priority:</label><br>
+                        <select id="plan-priority" name="plan-priority" required>
+                            <option value="" selected disabled>Select Priority</option>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Status -->
+                <tr>
+                    <td>
+                        <label for="plan-status">Status:</label><br>
+                        <select id="plan-status" name="plan-status" required>
+                            <option value="" selected disabled>Select Status</option>
+                            <option value="Planned">Planned</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Postponed">Postponed</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Notes -->
+                <tr>
+                    <td>
+                        <label for="plan-notes">Notes:</label><br>
+                        <textarea id="plan-notes" name="plan-notes" placeholder="Write notes (optional)" rows="4"
+                            cols="40"></textarea>
+                    </td>
+                </tr>
+
+                <!-- Buttons -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Add Plan">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <p id="plannerMessage"></p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </fieldset>
+
+    <br>
+
+    <fieldset class="wide">
+        <legend>📋 Study Plan Records</legend>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl</th>
+                    <th>Study Topic</th>
+                    <th>Course / Subject</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="plannerTableBody"></tbody>
+        </table>
+        <p id="plannerListMessage"></p>
+    </fieldset>
+
+    <br>
+
+    <br>
+
+    <!-- STUDENT JAVASCRIPT -->
+
+    <script src="js/Student.js"></script>
+
+</body>
+
+</html>

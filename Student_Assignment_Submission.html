@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Assignment Submission</title>
+    <link rel="stylesheet" type="text/css" href="css/Student.css">
+</head>
+
+<body>
+
+    <h1>🎓 CoachEase</h1>
+
+    <nav>
+        <a href="Student_Dashboard.html">Dashboard</a> |
+        <a href="Student_Assignment_Submission.html">Assignment Submission</a> |
+        <a href="Student_Study_Planner.html">Study Planner</a> |
+        <a href="Student_Feedback.html">Student Feedback</a>
+    </nav>
+
+    <br><br>
+
+    <!-- 1. Assignment Submission Management -->
+    <fieldset>
+        <legend>📝 Submit Assignment</legend>
+
+        <form method="post" id="assignmentForm">
+
+            <table>
+
+                <!-- Assignment Title -->
+                <tr>
+                    <td>
+                        <label for="assignment-title">Assignment Title:</label><br>
+                        <input type="text" id="assignment-title" name="assignment-title"
+                            placeholder="Enter assignment title" required>
+                    </td>
+                </tr>
+
+                <!-- Course / Subject -->
+                <tr>
+                    <td>
+                        <label for="assignment-subject">Course / Subject:</label><br>
+                        <select id="assignment-subject" name="assignment-subject" required>
+                            <option value="" selected disabled>Select Subject</option>
+                            <option value="Physics Paper 2">Physics Paper 2</option>
+                            <option value="Higher Math">Higher Math</option>
+                            <option value="Chemistry">Chemistry</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Submission Date -->
+                <tr>
+                    <td>
+                        <label for="submission-date">Submission Date:</label><br>
+                        <input type="date" id="submission-date" name="submission-date" required>
+                    </td>
+                </tr>
+
+                <!-- File Name -->
+                <tr>
+                    <td>
+                        <label for="file-name">File Name:</label><br>
+                        <input type="text" id="file-name" name="file-name" placeholder="Enter file name" required>
+                    </td>
+                </tr>
+
+                <!-- Status -->
+                <tr>
+                    <td>
+                        <label for="assignment-status">Status:</label><br>
+                        <select id="assignment-status" name="assignment-status" required>
+                            <option value="" selected disabled>Select Status</option>
+                            <option value="Submitted">Submitted</option>
+                            <option value="Under Review">Under Review</option>
+                            <option value="Approved">Approved</option>
+                            <option value="Resubmit Needed">Resubmit Needed</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Notes -->
+                <tr>
+                    <td>
+                        <label for="assignment-notes">Notes:</label><br>
+                        <textarea id="assignment-notes" name="assignment-notes" placeholder="Write notes (optional)"
+                            rows="4" cols="40"></textarea>
+                    </td>
+                </tr>
+
+                <!-- Buttons -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Submit Assignment">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <p id="assignmentMessage"></p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </fieldset>
+
+    <br>
+
+    <fieldset class="wide">
+        <legend>📋 Assignment Records</legend>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl</th>
+                    <th>Assignment Title</th>
+                    <th>Course / Subject</th>
+                    <th>Submitted On</th>
+                    <th>File Name</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="assignmentTableBody"></tbody>
+        </table>
+        <p id="assignmentListMessage"></p>
+    </fieldset>
+
+    <br>
+
+    <br>
+
+    <!-- STUDENT JAVASCRIPT -->
+
+    <script src="js/Student.js"></script>
+
+</body>
+
+</html>

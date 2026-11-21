@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Student Login</title>
+    <link rel="stylesheet" type="text/css" href="css/Student.css">
+</head>
+
+<body>
+
+    <h1>🎓 CoachEase</h1>
+
+    <nav>
+        <a href="Student_LogIn.html">Student Login</a>
+    </nav>
+
+    <br><br>
+
+    <fieldset>
+        <legend>🔐 Student Login</legend>
+
+        <form method="post" id="studentLoginForm">
+
+            <table>
+
+                <!-- Email -->
+                <tr>
+                    <td>
+                        <label for="studentEmail">Email:</label><br>
+                        <input type="email" id="studentEmail" name="studentEmail" placeholder="Enter your email"
+                            required>
+                    </td>
+                </tr>
+
+                <!-- Password -->
+                <tr>
+                    <td>
+                        <label for="studentPassword">Password:</label><br>
+                        <input type="password" id="studentPassword" name="studentPassword"
+                            placeholder="Enter your password" minlength="4" required>
+                    </td>
+                </tr>
+
+                <!-- Buttons -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Login">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+
+                <!-- Message -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <p id="studentLoginMessage"></p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </fieldset>
+
+    <br>
+
+    <!-- STUDENT JAVASCRIPT -->
+
+    <script src="js/Student.js"></script>
+
+</body>
+
+</html>

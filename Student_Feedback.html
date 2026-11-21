@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoachEase - Student Feedback</title>
+    <link rel="stylesheet" type="text/css" href="css/Student.css">
+</head>
+
+<body>
+
+    <h1>🎓 CoachEase</h1>
+
+    <nav>
+        <a href="Student_Dashboard.html">Dashboard</a> |
+        <a href="Student_Assignment_Submission.html">Assignment Submission</a> |
+        <a href="Student_Study_Planner.html">Study Planner</a> |
+        <a href="Student_Feedback.html">Student Feedback</a>
+    </nav>
+
+    <br><br>
+
+
+    <!-- 3. Student Feedback Management -->
+    <fieldset>
+        <legend>💬 Submit Feedback</legend>
+
+        <form method="post" id="feedbackForm">
+
+            <table>
+
+                <!-- Teacher -->
+                <tr>
+                    <td>
+                        <label for="feedback-teacher">Teacher:</label><br>
+                        <select id="feedback-teacher" name="feedback-teacher" required>
+                            <option value="" selected disabled>Select Teacher</option>
+                            <option value="Mr. Rahman">Mr. Rahman</option>
+                            <option value="Ms. Sultana">Ms. Sultana</option>
+                            <option value="Dr. Ahmed">Dr. Ahmed</option>
+                            <option value="Mr. Karim">Mr. Karim</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Course / Subject -->
+                <tr>
+                    <td>
+                        <label for="feedback-subject">Course / Subject:</label><br>
+                        <select id="feedback-subject" name="feedback-subject" required>
+                            <option value="" selected disabled>Select Subject</option>
+                            <option value="Physics Paper 2">Physics Paper 2</option>
+                            <option value="Higher Math">Higher Math</option>
+                            <option value="Chemistry">Chemistry</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Feedback Type -->
+                <tr>
+                    <td>
+                        <label for="feedback-type">Feedback Type:</label><br>
+                        <select id="feedback-type" name="feedback-type" required>
+                            <option value="" selected disabled>Select Feedback Type</option>
+                            <option value="Class Experience">Class Experience</option>
+                            <option value="Teaching Method">Teaching Method</option>
+                            <option value="Course Content">Course Content</option>
+                            <option value="Suggestion">Suggestion</option>
+                            <option value="Complaint">Complaint</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Rating -->
+                <tr>
+                    <td>
+                        <label for="feedback-rating">Rating:</label><br>
+                        <select id="feedback-rating" name="feedback-rating" required>
+                            <option value="" selected disabled>Select Rating</option>
+                            <option value="5">5 - Excellent</option>
+                            <option value="4">4 - Good</option>
+                            <option value="3">3 - Average</option>
+                            <option value="2">2 - Poor</option>
+                            <option value="1">1 - Very Poor</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Feedback Date -->
+                <tr>
+                    <td>
+                        <label for="feedback-date">Feedback Date:</label><br>
+                        <input type="date" id="feedback-date" name="feedback-date" required>
+                    </td>
+                </tr>
+
+                <!-- Comments -->
+                <tr>
+                    <td>
+                        <label for="feedback-comments">Comments:</label><br>
+                        <textarea id="feedback-comments" name="feedback-comments" placeholder="Write your feedback"
+                            rows="4" cols="40" required></textarea>
+                    </td>
+                </tr>
+
+                <!-- Buttons -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Submit Feedback">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <p id="feedbackMessage"></p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+    </fieldset>
+
+    <br>
+
+    <fieldset class="wide">
+        <legend>📋 Feedback Records</legend>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl</th>
+                    <th>Teacher</th>
+                    <th>Course / Subject</th>
+                    <th>Feedback Type</th>
+                    <th>Rating</th>
+                    <th>Date</th>
+                    <th>Comments</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="feedbackTableBody"></tbody>
+        </table>
+        <p id="feedbackListMessage"></p>
+    </fieldset>
+
+    <br>
+
+    <br>
+
+    <!-- STUDENT JAVASCRIPT -->
+
+    <script src="js/Student.js"></script>
+
+</body>
+
+</html>
