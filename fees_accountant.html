@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fees</title>
+    <title>Fees</title>
+
     <link rel="stylesheet" href="../fall-26-27_Coaching_Center_Management_System/css/style4_accountant.css">
 </head>
 
 <body>
-    <h1>CoachEase</h1>
-    <h2>Accountant Dashboard</h2>
+
+    <h1>🎓 CoachEase</h1>
+    <h3>Accountant Dashboard</h3>
 
     <nav>
         <a href="dashboard_accountant.html">Dashboard</a>
@@ -20,21 +22,39 @@
     </nav>
 
     <fieldset>
+
         <h2>Student Fee Collection</h2>
-        <form>
+
+        <form id="feeForm">
+
             <table>
+
                 <tr>
-                    <td><label for="student_id">Student ID:</label></td>
-                    <td><input type="text" id="student_id" name="student_id" placeholder="Enter student ID" required>
+                    <td>
+                        <label for="student_id">Student ID:</label>
+                    </td>
+
+                    <td>
+                        <input type="text" id="student_id" name="student_id" placeholder="Enter student ID" required>
                     </td>
                 </tr>
+
                 <tr>
-                    <td><label for="student_name">Student Name:</label></td>
-                    <td><input type="text" id="student_name" name="student_name" placeholder="Enter student name"
-                            required></td>
+                    <td>
+                        <label for="student_name">Student Name:</label>
+                    </td>
+
+                    <td>
+                        <input type="text" id="student_name" name="student_name" placeholder="Enter student name"
+                            required>
+                    </td>
                 </tr>
+
                 <tr>
-                    <td><label for="fee_class">Class:</label></td>
+                    <td>
+                        <label for="fee_class">Class:</label>
+                    </td>
+
                     <td>
                         <select id="fee_class" name="fee_class" required>
                             <option value="" selected disabled>Select Class</option>
@@ -48,8 +68,12 @@
                         </select>
                     </td>
                 </tr>
+
                 <tr>
-                    <td><label for="fee_month">Fee Month:</label></td>
+                    <td>
+                        <label for="fee_month">Fee Month:</label>
+                    </td>
+
                     <td>
                         <select id="fee_month" name="fee_month" required>
                             <option value="" selected disabled>Select Month</option>
@@ -68,17 +92,33 @@
                         </select>
                     </td>
                 </tr>
+
                 <tr>
-                    <td><label for="fee_amount">Fee Amount:</label></td>
-                    <td><input type="number" id="fee_amount" name="fee_amount" min="0" placeholder="Enter amount"
-                            required></td>
+                    <td>
+                        <label for="fee_amount">Fee Amount:</label>
+                    </td>
+
+                    <td>
+                        <input type="number" id="fee_amount" name="fee_amount" min="0.01" step="0.01"
+                            placeholder="Enter amount" required>
+                    </td>
                 </tr>
+
                 <tr>
-                    <td><label for="payment_date">Payment Date:</label></td>
-                    <td><input type="date" id="payment_date" name="payment_date" required></td>
+                    <td>
+                        <label for="payment_date">Payment Date:</label>
+                    </td>
+
+                    <td>
+                        <input type="date" id="payment_date" name="payment_date" required>
+                    </td>
                 </tr>
+
                 <tr>
-                    <td><label for="payment_method">Payment Method:</label></td>
+                    <td>
+                        <label for="payment_method">Payment Method:</label>
+                    </td>
+
                     <td>
                         <select id="payment_method" name="payment_method" required>
                             <option value="" selected disabled>Select Method</option>
@@ -89,47 +129,45 @@
                         </select>
                     </td>
                 </tr>
+
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Collect Fee"> <input type="reset" value="Reset"></td>
+
+                    <td>
+                        <input type="submit" id="feeSubmit" value="Collect Fee">
+                        <input type="reset" value="Reset">
+                    </td>
                 </tr>
+
             </table>
+
         </form>
 
         <h3>Fee Collection List</h3>
+
         <table border="1">
-            <tr>
-                <th>Receipt ID</th>
-                <th>Student ID</th>
-                <th>Student Name</th>
-                <th>Class</th>
-                <th>Month</th>
-                <th>Amount</th>
-                <th>Payment Method</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td>REC-101</td>
-                <td>STU-101</td>
-                <td>Rahim Ahmed</td>
-                <td>Class 10</td>
-                <td>October</td>
-                <td>2000</td>
-                <td>Cash</td>
-                <td><button type="button">Edit</button> <button type="button">Delete</button></td>
-            </tr>
-            <tr>
-                <td>REC-102</td>
-                <td>STU-102</td>
-                <td>Sumaiya Akter</td>
-                <td>Class 11</td>
-                <td>October</td>
-                <td>2500</td>
-                <td>bKash</td>
-                <td><button type="button">Edit</button> <button type="button">Delete</button></td>
-            </tr>
+
+            <thead>
+                <tr>
+                    <th>Receipt ID</th>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Month</th>
+                    <th>Amount</th>
+                    <th>Payment Method</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="feeList">
+            </tbody>
+
         </table>
+
     </fieldset>
+
+    <script src="../fall-26-27_Coaching_Center_Management_System/js/accountant.js" defer></script>
 
 </body>
 

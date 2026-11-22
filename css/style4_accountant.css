@@ -7,38 +7,49 @@ body {
     background-color: #f2f3fa;
     margin: 0;
     padding: 30px;
-    color: #292b63;
+    color: black;
 }
 
 
 h1 {
     text-align: center;
-    color: #292b63;
+    color: #000422;
     font-size: 35px;
     margin-bottom: 25px;
 }
 
 
-h2 {
+h3 {
     text-align: center;
-    color: #292b63;
+    color: #000422;
     margin-bottom: 25px;
 }
 
 h3 {
-    color: #292b63;
+    color: #000422;
     margin-top: 25px;
 }
 
 
 nav {
-    background-color: #292b63;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0 30px;
+
+
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    align-items: center;
+    gap: 0;
+    width: min(94%, 800px);
+    margin: 20px auto 10px;
+    padding: 34px 24px;
+    background: #1B1F3F;
+    border-radius: 48px;
+    box-shadow: 0 14px 34px rgba(27, 31, 63, 0.35);
+    font-size: 0;
 }
 
 nav a {
@@ -94,7 +105,7 @@ input[type="submit"],
 input[type="reset"],
 button {
     width: auto;
-    background-color: #292b63;
+    background-color: #000422;
     color: white;
     border: none;
     padding: 10px 18px;
@@ -116,7 +127,7 @@ fieldset>table {
 }
 
 fieldset>table th {
-    background-color: #292b63;
+    background-color: #000422;
     color: white;
     padding: 12px;
 }
